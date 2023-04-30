@@ -1,0 +1,94 @@
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+
+
+
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+.box{
+    padding:5rem;
+    text-align: center;
+    border: 1px solid;
+    border-color: vars.$clr-orange-100;   
+    border-radius: 16px;
+    background: vars.$clr-light-black-2;
+    transition: 1s ease;
+}
+
+.product-category { /*titulo productos*/
+    @include mixins.set-font(vars.$fw-semibold, vars.$fs-mdl, vars.$clr-orange-100);
+    text-transform: uppercase;
+    padding:.2rem 0;
+    transition: 1s ease;
+     }
+
+.product-title { /*titulo productos*/
+@include mixins.set-font(vars.$fw-xbold, vars.$fs-mdxl, vars.$clr-white);
+text-transform: uppercase;
+ }
+
+.product-description { /*titulo productos*/
+@include mixins.set-font(vars.$fw-light, vars.$fs-rg, vars.$clr-white);
+padding:.5rem 0;
+}
+
+.product-details { /*titulo productos*/
+    div{
+@include mixins.set-font(vars.$fw-reg, vars.$fs-md, vars.$clr-orange-200);
+padding:.5rem 0;
+transition: 1s ease;
+    }
+}
+
+.img-recipe{
+            
+border-radius: 10px;
+width: 100%;
+vertical-align: middle;
+overflow: clip;
+transition: .5s ease;
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+   
+}
+ 
+.price{ /*precio*/
+            color: black;
+            font-size: 1.5rem;
+            padding:.5rem 0;
+
+span{
+                font-size: 1.5rem;
+                text-decoration: line-through;
+                font-weight: lighter;
+}
+}
+
+.box:hover{ /*color caja productos*/
+            background:vars.$clr-orange-100;
+            
+            .product-category{
+                @include mixins.set-font(vars.$fw-semibold, vars.$fs-mdxl, vars.$clr-light-black-2);
+            }
+
+            .product-details { /*titulo productos*/
+                div{
+            @include mixins.set-font(vars.$fw-reg, vars.$fs-md, vars.$clr-light-black-2);
+                }
+            }
+
+            .img-recipe{
+                box-shadow: -1px 2px 14px 1px rgb(0, 0, 0);
+            }
+            
+}
+
+
+
+    
+ 

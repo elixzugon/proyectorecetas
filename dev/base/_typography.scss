@@ -1,0 +1,21 @@
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+
+.principal-title{
+    @include mixins.set-font(vars.$fw-bold, vars.$fs-lg, vars.$clr-white);
+    text-align: left;
+    line-height: 5rem;
+    text-transform: uppercase;
+    width: 80%;
+  }
+
+  .titles{
+    @include mixins.set-font(vars.$fw-bold, vars.$fs-mdl, vars.$clr-orange-100);
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    
+    span{
+        @include mixins.set-font(vars.$fw-bold, vars.$fs-mdl, vars.$clr-orange-200);
+    }
+  }

@@ -1,0 +1,81 @@
+@use '../abstracts/vars';
+@use '../abstracts/mixins';
+
+
+.btn-inicio{
+@include mixins.btn(vars.$fw-light, vars.$fs-rg, none, vars.$clr-white, vars.$clr-orange-100);
+display: inline-block;
+padding: 0.9rem 3rem;
+}
+
+.like-btn{
+    padding: .5rem;
+        height:50px;
+        width:55px;
+        transition: 1s ease;
+}
+
+.view-recipe-btn{
+    padding: .5rem;
+        height:50px;
+        width:55px;
+        transition: .5s ease;
+}
+
+.like-btn:hover{
+    height:60px;
+    width:65px;
+    transform: rotate(360deg);
+    opacity: 80%;
+}
+
+.view-recipe-btn:hover{
+    height:65px;
+    width:70px;
+    opacity: 80%;
+}
+
+.header{ 
+    
+    .search-form{
+    position: absolute;
+    top:115%; right: 7%;
+    background: var(--black);
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top
+
+    input{
+        height: 100%;
+        width: 100%;
+        font-size: 1.6rem;
+        color:var(--black);
+        padding:1rem;
+        text-transform: none;
+    }
+
+    label{
+        cursor: pointer;
+        font-size: 2.2rem;
+        margin-right: 1.5rem;
+        color:var(--black);
+        
+    }
+    
+    label:hover{
+        color:var(--main-color);
+    }
+    
+
+}
+.search-form.active{
+    transform: scaleY(1);
+}
+}
+
+
+
+

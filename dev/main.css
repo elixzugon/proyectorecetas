@@ -1,0 +1,569 @@
+/* VARIABLES*/
+/* custum properties - constants */
+/* custom properties - constants */
+/* font & weight */
+/* 16 18 20 24 64 80 */
+/* font sizes */
+/* colors */
+/*  h -> hue/color 0/360, s -> saturation 0/100, l -> lightness 0/100, a -> alpha 0/1 */
+/* VARIABLES*/
+/* custum properties - constants */
+/* custom properties - constants */
+/* font & weight */
+/* 16 18 20 24 64 80 */
+/* font sizes */
+/* colors */
+/*  h -> hue/color 0/360, s -> saturation 0/100, l -> lightness 0/100, a -> alpha 0/1 */
+header {
+  background: #d54630;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: 0.1rem solid;
+  border-color: hsl(6deg, 45%, 64%);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+header nav a {
+  text-decoration: underline;
+  list-style: none;
+  padding: 0.7rem;
+  color: hsl(0deg, 0%, 100%);
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 1.125rem;
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+}
+header nav a:hover {
+  color: black;
+  border-bottom: 0.1rem solid black;
+  padding-bottom: 1.1rem;
+  text-decoration: none;
+}
+
+.custom-container {
+  padding: 2rem 7%;
+}
+
+.inicio {
+  min-height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-color: #d54630;
+}
+.inicio p {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: hsl(0deg, 0%, 100%);
+  text-align: left;
+  text-transform: capitalize;
+}
+
+footer {
+  background: #d54630;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem 7%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+footer nav a {
+  text-decoration: underline;
+  list-style: none;
+  padding: 0.7rem;
+  color: hsl(0deg, 0%, 100%);
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 1.125rem;
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+}
+footer nav a:hover {
+  color: black;
+  border-bottom: 0.1rem solid black;
+  padding-bottom: 1.1rem;
+  text-decoration: none;
+}
+
+.credits {
+  font-weight: 300;
+  font-size: 1.125rem;
+  color: hsl(0deg, 0%, 100%);
+  padding: 1.5rem;
+}
+
+/* VARIABLES*/
+/* custum properties - constants */
+/* custom properties - constants */
+/* font & weight */
+/* 16 18 20 24 64 80 */
+/* font sizes */
+/* colors */
+/*  h -> hue/color 0/360, s -> saturation 0/100, l -> lightness 0/100, a -> alpha 0/1 */
+.principal-title {
+  font-weight: 700;
+  font-size: 4rem;
+  color: hsl(0deg, 0%, 100%);
+  text-align: left;
+  line-height: 5rem;
+  text-transform: uppercase;
+  width: 80%;
+}
+
+.titles {
+  font-weight: 700;
+  font-size: 2.125rem;
+  color: #d54630;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+}
+.titles span {
+  font-weight: 700;
+  font-size: 2.125rem;
+  color: hsl(6deg, 45%, 64%);
+}
+
+/* VARIABLES*/
+/* custum properties - constants */
+/* custom properties - constants */
+/* font & weight */
+/* 16 18 20 24 64 80 */
+/* font sizes */
+/* colors */
+/*  h -> hue/color 0/360, s -> saturation 0/100, l -> lightness 0/100, a -> alpha 0/1 */
+/* VARIABLES*/
+/* custum properties - constants */
+/* custom properties - constants */
+/* font & weight */
+/* 16 18 20 24 64 80 */
+/* font sizes */
+/* colors */
+/*  h -> hue/color 0/360, s -> saturation 0/100, l -> lightness 0/100, a -> alpha 0/1 */
+.btn-inicio {
+  font-weight: 300;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  background-color: hsl(0deg, 0%, 100%);
+  color: #d54630;
+  display: inline-block;
+  padding: 0.9rem 3rem;
+}
+
+.like-btn {
+  padding: 0.5rem;
+  height: 50px;
+  width: 55px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.view-recipe-btn {
+  padding: 0.5rem;
+  height: 50px;
+  width: 55px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.like-btn:hover {
+  height: 60px;
+  width: 65px;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  opacity: 80%;
+}
+
+.view-recipe-btn:hover {
+  height: 65px;
+  width: 70px;
+  opacity: 80%;
+}
+
+.header .search-form {
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background: var(--black);
+  width: 50rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top input;
+          transform-origin: top input;
+  transform-origin-height: 100%;
+  transform-origin-width: 100%;
+  transform-origin-font-size: 1.6rem;
+  transform-origin-color: var(--black);
+  transform-origin-padding: 1rem;
+  transform-origin-text-transform: none;
+}
+.header .search-form label {
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: var(--black);
+}
+.header .search-form label:hover {
+  color: var(--main-color);
+}
+.header .search-form.active {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+/* VARIABLES*/
+/* custum properties - constants */
+/* custom properties - constants */
+/* font & weight */
+/* 16 18 20 24 64 80 */
+/* font sizes */
+/* colors */
+/*  h -> hue/color 0/360, s -> saturation 0/100, l -> lightness 0/100, a -> alpha 0/1 */
+.box-container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.box {
+  padding: 5rem;
+  text-align: center;
+  border: 1px solid;
+  border-color: #d54630;
+  border-radius: 16px;
+  background: rgb(37, 37, 37);
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.product-category { /*titulo productos*/
+  font-weight: 600;
+  font-size: 2.125rem;
+  color: #d54630;
+  text-transform: uppercase;
+  padding: 0.2rem 0;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.product-title { /*titulo productos*/
+  font-weight: 900;
+  font-size: 3rem;
+  color: hsl(0deg, 0%, 100%);
+  text-transform: uppercase;
+}
+
+.product-description { /*titulo productos*/
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.5rem 0;
+}
+
+.product-details { /*titulo productos*/ }
+.product-details div {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: hsl(6deg, 45%, 64%);
+  padding: 0.5rem 0;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.img-recipe {
+  border-radius: 10px;
+  width: 100%;
+  vertical-align: middle;
+  overflow: clip;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.img-recipe *, .img-recipe ::after, .img-recipe ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.price { /*precio*/
+  color: black;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+.price span {
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  font-weight: lighter;
+}
+
+.box:hover { /*color caja productos*/
+  background: #d54630;
+}
+.box:hover .product-category {
+  font-weight: 600;
+  font-size: 3rem;
+  color: rgb(37, 37, 37);
+}
+.box:hover .product-details { /*titulo productos*/ }
+.box:hover .product-details div {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgb(37, 37, 37);
+}
+.box:hover .img-recipe {
+  -webkit-box-shadow: -1px 2px 14px 1px rgb(0, 0, 0);
+          box-shadow: -1px 2px 14px 1px rgb(0, 0, 0);
+}
+
+/* VARIABLES*/
+/* custum properties - constants */
+/* custom properties - constants */
+/* font & weight */
+/* 16 18 20 24 64 80 */
+/* font sizes */
+/* colors */
+/*  h -> hue/color 0/360, s -> saturation 0/100, l -> lightness 0/100, a -> alpha 0/1 */
+.header .icons div {
+  color: white;
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+}
+
+.header .icons div:hover {
+  color: black;
+}
+
+/* VARIABLES*/
+/* custum properties - constants */
+/* custom properties - constants */
+/* font & weight */
+/* 16 18 20 24 64 80 */
+/* font sizes */
+/* colors */
+/*  h -> hue/color 0/360, s -> saturation 0/100, l -> lightness 0/100, a -> alpha 0/1 */
+.btn-inicio {
+  font-weight: 300;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  background-color: hsl(0deg, 0%, 100%);
+  color: #d54630;
+  display: inline-block;
+  padding: 0.9rem 3rem;
+}
+
+.like-btn {
+  padding: 0.5rem;
+  height: 50px;
+  width: 55px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.view-recipe-btn {
+  padding: 0.5rem;
+  height: 50px;
+  width: 55px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.like-btn:hover {
+  height: 60px;
+  width: 65px;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  opacity: 80%;
+}
+
+.view-recipe-btn:hover {
+  height: 65px;
+  width: 70px;
+  opacity: 80%;
+}
+
+.header .search-form {
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background: var(--black);
+  width: 50rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top input;
+          transform-origin: top input;
+  transform-origin-height: 100%;
+  transform-origin-width: 100%;
+  transform-origin-font-size: 1.6rem;
+  transform-origin-color: var(--black);
+  transform-origin-padding: 1rem;
+  transform-origin-text-transform: none;
+}
+
+.header .search-form label {
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: var(--black);
+}
+
+.header .search-form label:hover {
+  color: var(--main-color);
+}
+
+.header .search-form.active {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #d54630;
+}
+
+.custom-form label {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #d54630;
+}
+.custom-form input {
+  min-height: 3.125rem;
+  line-height: initial;
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: hsl(0deg, 0%, 100%);
+  background-clip: padding-box;
+  border: 1px solid #d54630;
+  border-radius: 0.375rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+.custom-form input a {
+  font-weight: 300;
+  font-size: 1.125rem;
+  color: rgb(37, 37, 37);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.custom-form input a:hover {
+  font-weight: 300;
+  font-size: 1.125rem;
+  color: rgb(75, 75, 75);
+}
+.custom-form textarea {
+  min-height: 3.125rem;
+  line-height: initial;
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: hsl(0deg, 0%, 100%);
+  background-clip: padding-box;
+  border: 1px solid #d54630;
+  border-radius: 0.375rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+.custom-form select {
+  word-wrap: normal;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #d54630;
+  color: #d54630;
+  padding: 0.5rem;
+}
+
+.log-reg-button {
+  font-weight: 300;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  background-color: #d54630;
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.9rem 3rem;
+  min-height: 3.125rem;
+  line-height: initial;
+  width: 100% !important;
+  border-radius: 10px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.log-reg-button:hover {
+  font-weight: 300;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  background-color: hsl(6deg, 45%, 64%);
+  color: rgb(37, 37, 37);
+}
+
+.create-account {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #d54630;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.create-account:hover {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: hsl(6deg, 45%, 64%);
+}

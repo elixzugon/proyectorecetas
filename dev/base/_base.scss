@@ -1,0 +1,105 @@
+@use 'abstracts/vars';
+@use '../abstracts/mixins';
+// html elements properties
+
+header{
+   
+    background: $clr-orange-100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: .1rem solid;
+    border-color: $clr-orange-200;
+//  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    nav{
+
+    a{
+        text-decoration: underline;
+        list-style: none;
+        padding: .7rem;
+        color: $clr-white;
+        text-transform: capitalize;
+        font-weight: $fw-light;
+        font-size: $fs-sm;
+        transition: .8s ease;
+    }
+    a:hover{
+        color: black;
+        border-bottom: .1rem solid black;
+        padding-bottom: 1.1rem;
+        text-decoration: none;
+
+    }
+}
+
+    
+}
+
+.custom-container{
+    padding: 2rem 7%;
+}
+
+.inicio{
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    //background: url(/dist/images/blog-1.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-color: $clr-orange-100;
+    
+    p{
+        font-size: 2rem;
+        font-weight: $fw-light;
+        line-height: 1.8;
+        padding: 1rem 0;
+        color: $clr-white;
+        text-align: left;
+        text-transform: capitalize;
+    }
+}
+
+footer{
+    background:vars.$clr-orange-100;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+//  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    nav{
+    a{
+        text-decoration: underline;
+        list-style: none;
+        padding: .7rem;
+        color: $clr-white;
+        text-transform: capitalize;
+        font-weight: $fw-light;
+        font-size: $fs-sm;
+        transition: .8s ease;
+    }
+    a:hover{
+        color: black;
+        border-bottom: .1rem solid black;
+        padding-bottom: 1.1rem;
+        text-decoration: none;
+
+    }
+}
+
+    }
+    
+
+
+
+.credits{
+    @include mixins.set-font(vars.$fw-light, vars.$fs-sm, vars.$clr-white);
+    padding:1.5rem;    }
+

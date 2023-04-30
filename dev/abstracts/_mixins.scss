@@ -1,0 +1,20 @@
+@use 'vars';
+// font mixin
+@mixin set-font($fweight, $fsize, $fcolor){
+    font-weight: $fweight;
+    font-size: $fsize ;   
+    color: $fcolor;
+}
+// btn mixin
+
+@mixin btn($fw, $fsize, $border, $bg, $color){
+    font-weight: $fw;
+    text-decoration: none;
+    font-family: vars.$font-family;
+    font-size: $fsize;
+    border: $border;
+    background-color: $bg;
+    color: $color;
+
+}
+
