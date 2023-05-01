@@ -1,5 +1,6 @@
 @use '../abstracts/vars';
 @use '../abstracts/mixins';
+@use '../abstracts/media-queries';
 
 
 
@@ -28,6 +29,7 @@
 .product-title { /*titulo productos*/
 @include mixins.set-font(vars.$fw-xbold, vars.$fs-mdxl, vars.$clr-white);
 text-transform: uppercase;
+
  }
 
 .product-description { /*titulo productos*/
@@ -74,6 +76,7 @@ span{
             
             .product-category{
                 @include mixins.set-font(vars.$fw-semibold, vars.$fs-mdxl, vars.$clr-light-black-2);
+
             }
 
             .product-details { /*titulo productos*/
@@ -87,6 +90,7 @@ span{
             }
             
 }
+
 
 
 

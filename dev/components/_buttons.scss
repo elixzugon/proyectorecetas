@@ -8,6 +8,17 @@ display: inline-block;
 padding: 0.9rem 3rem;
 }
 
+.btn-search{
+    @include mixins.btn(vars.$fw-light, vars.$fs-rg, none, vars.$clr-white, vars.$clr-orange-100);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    transition: .5s ease;
+}
+
+.btn-search:hover{
+    @include mixins.btn(vars.$fw-light, vars.$fs-rg, none, vars.$clr-orange-200, vars.$clr-light-black-2);
+}
+
 .like-btn{
     padding: .5rem;
         height:50px;

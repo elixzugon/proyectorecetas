@@ -14,6 +14,40 @@
 /* font sizes */
 /* colors */
 /*  h -> hue/color 0/360, s -> saturation 0/100, l -> lightness 0/100, a -> alpha 0/1 */
+.principal-title {
+  font-weight: 700;
+  font-size: 4rem;
+  color: hsl(0deg, 0%, 100%);
+  text-align: left;
+  line-height: 5rem;
+  text-transform: uppercase;
+  width: 80%;
+}
+
+@media only screen and (max-width: 480px) {
+  .principal-title {
+    font-weight: 700;
+    font-size: 2.125rem;
+    color: hsl(0deg, 0%, 100%);
+    line-height: 2.5rem;
+    width: 100%;
+  }
+}
+.titles {
+  font-weight: 700;
+  font-size: 2.125rem;
+  color: #d54630;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+}
+
+.titles span {
+  font-weight: 700;
+  font-size: 2.125rem;
+  color: hsl(6deg, 45%, 64%);
+}
+
 header {
   background: #d54630;
   display: -webkit-box;
@@ -68,13 +102,21 @@ header nav a:hover {
   background-color: #d54630;
 }
 .inicio p {
-  font-size: 2rem;
   font-weight: 300;
+  font-size: 1.5rem;
+  color: hsl(0deg, 0%, 100%);
   line-height: 1.8;
   padding: 1rem 0;
   color: hsl(0deg, 0%, 100%);
   text-align: left;
   text-transform: capitalize;
+}
+@media only screen and (max-width: 480px) {
+  .inicio p {
+    font-weight: 300;
+    font-size: 1.125rem;
+    color: hsl(0deg, 0%, 100%);
+  }
 }
 
 footer {
@@ -133,6 +175,15 @@ footer nav a:hover {
   text-transform: uppercase;
   width: 80%;
 }
+@media only screen and (max-width: 480px) {
+  .principal-title {
+    font-weight: 700;
+    font-size: 2.125rem;
+    color: hsl(0deg, 0%, 100%);
+    line-height: 2.5rem;
+    width: 100%;
+  }
+}
 
 .titles {
   font-weight: 700;
@@ -174,6 +225,30 @@ footer nav a:hover {
   color: #d54630;
   display: inline-block;
   padding: 0.9rem 3rem;
+}
+
+.btn-search {
+  font-weight: 300;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  background-color: hsl(0deg, 0%, 100%);
+  color: #d54630;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.btn-search:hover {
+  font-weight: 300;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  background-color: hsl(6deg, 45%, 64%);
+  color: rgb(37, 37, 37);
 }
 
 .like-btn {
@@ -384,6 +459,30 @@ footer nav a:hover {
   color: #d54630;
   display: inline-block;
   padding: 0.9rem 3rem;
+}
+
+.btn-search {
+  font-weight: 300;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  background-color: hsl(0deg, 0%, 100%);
+  color: #d54630;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.btn-search:hover {
+  font-weight: 300;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  background-color: hsl(6deg, 45%, 64%);
+  color: rgb(37, 37, 37);
 }
 
 .like-btn {

@@ -37,7 +37,7 @@ app.component('recipe-card',{
     /*html*/ 
     `
     
-    <div class="box p-3 col-3">
+    <div class="box p-3">
     <img v-bind:src="image" class="img-recipe" alt="featured recipe">
     <div class=" p-0">
         <p class="pt-3 product-category">{{ category }}</p>

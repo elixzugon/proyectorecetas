@@ -1,5 +1,7 @@
 @use 'abstracts/vars';
 @use '../abstracts/mixins';
+@use '../base/typography';
+@use '../abstracts/media-queries';
 // html elements properties
 
 header{
@@ -54,13 +56,15 @@ header{
     background-color: $clr-orange-100;
     
     p{
-        font-size: 2rem;
-        font-weight: $fw-light;
+        @include mixins.set-font(vars.$fw-light, vars.$fs-md, vars.$clr-white);
         line-height: 1.8;
         padding: 1rem 0;
         color: $clr-white;
         text-align: left;
         text-transform: capitalize;
+        @include media-queries.respond-to(media-queries.$phone){
+            @include mixins.set-font(vars.$fw-light, vars.$fs-sm, vars.$clr-white);
+        }
     }
 }
 
@@ -95,11 +99,8 @@ footer{
 }
 
     }
-    
-
-
-
 .credits{
     @include mixins.set-font(vars.$fw-light, vars.$fs-sm, vars.$clr-white);
     padding:1.5rem;    }
+
 
