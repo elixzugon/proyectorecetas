@@ -1,0 +1,29 @@
+@use '../abstracts/media-queries';
+@use '../abstracts/mixins';
+@use '../abstracts/vars';
+@use '../base/typography';
+.modal-container{
+   justify-content: left;   
+}
+
+ol{
+    width: 80%;
+    li{
+        @include mixins.set-font(vars.$fw-med, vars.$fs-sm, vars.$clr-light-black-2);
+    }
+}
+
+.ingredients-title{
+    @include mixins.set-font(vars.$fw-xbold, vars.$fs-mdl, vars.$clr-orange-100);
+
+} 
+
+.times-title{
+    @include mixins.set-font(vars.$fw-semibold, vars.$fs-rg, vars.$clr-orange-100);
+    text-transform: uppercase;
+}
+
+.times-descriptions{
+    @include mixins.set-font(vars.$fw-light, vars.$fs-sm, vars.$clr-orange-100);
+}
+

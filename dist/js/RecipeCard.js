@@ -62,7 +62,7 @@ app.component('recipe-card',{
             <img class="like-btn" src="./svg/star-solid.svg" alt="like">
         </a>
         <!--<button class="btn btn-success">Unlike</button>-->
-        <a href="#">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             <img class="view-recipe-btn" src="./images/ojo-ver-receta.png" alt="view recipe">
         </a>    </div>
 </div>

@@ -666,3 +666,79 @@ h1 {
   font-size: 1.5rem;
   color: hsl(6deg, 45%, 64%);
 }
+
+/* VARIABLES*/
+/* custum properties - constants */
+/* custom properties - constants */
+/* font & weight */
+/* 16 18 20 24 64 80 */
+/* font sizes */
+/* colors */
+/*  h -> hue/color 0/360, s -> saturation 0/100, l -> lightness 0/100, a -> alpha 0/1 */
+.principal-title {
+  font-weight: 700;
+  font-size: 4rem;
+  color: hsl(0deg, 0%, 100%);
+  text-align: left;
+  line-height: 5rem;
+  text-transform: uppercase;
+  width: 80%;
+}
+
+@media only screen and (max-width: 480px) {
+  .principal-title {
+    font-weight: 700;
+    font-size: 2.125rem;
+    color: hsl(0deg, 0%, 100%);
+    line-height: 2.5rem;
+    width: 100%;
+  }
+}
+.titles {
+  font-weight: 700;
+  font-size: 2.125rem;
+  color: #d54630;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+}
+
+.titles span {
+  font-weight: 700;
+  font-size: 2.125rem;
+  color: hsl(6deg, 45%, 64%);
+}
+
+.modal-container {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+ol {
+  width: 80%;
+}
+ol li {
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: rgb(37, 37, 37);
+}
+
+.ingredients-title {
+  font-weight: 900;
+  font-size: 2.125rem;
+  color: #d54630;
+}
+
+.times-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #d54630;
+  text-transform: uppercase;
+}
+
+.times-descriptions {
+  font-weight: 300;
+  font-size: 1.125rem;
+  color: #d54630;
+}
