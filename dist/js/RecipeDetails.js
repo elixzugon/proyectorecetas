@@ -55,7 +55,7 @@ methods:{
        <!-- <p class="text-center fs-6">{{ ingredients }}</p>-->
           <h2 class="ingredients-title">PREPARACIÓN</h2>
             <div class="pt-2 ps-2 pe-2 ">  
-            <p class="fst-italic fw-light fs-5 ">{{ instructions }}</p>
+            <p class="fst-italic fw-light fs-5 ps-4 pe-4">{{ instructions }}</p>
             </div>
             <div class="row pt-2 ps-2 pe-2">
             <div class="col">
@@ -79,10 +79,24 @@ methods:{
               <p class="times-descriptions">30 min</p> 
         </div>
             </div>
-            <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" v-on:click="onClickPrev()">Prev</button>
-          <button type="button" class="btn btn-secondary" v-on:click="onClickNext()">Next</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            <div class="row">
+            <div class="col">
+              <p class="times-title">PORCIONES</P>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col">
+              <p class="times-descriptions">PORCIONES</P>
+            </div>
+            </div>
+
+          <div class="modal-footer">
+          <button type="button" class="btn-like-modal" v-on:click="onClickPrev()">Like</button>
+          <button type="button" class="btn-switch" v-on:click="onClickPrev()">Prev</button>
+          <button type="button" class="btn-switch" v-on:click="onClickNext()">Next</button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 
         </div>
       </div>

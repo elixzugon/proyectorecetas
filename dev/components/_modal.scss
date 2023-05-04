@@ -27,3 +27,53 @@ ol{
     @include mixins.set-font(vars.$fw-light, vars.$fs-sm, vars.$clr-orange-100);
 }
 
+.divisor{
+    
+height: 1px;
+width: 300px;
+background-color: vars.$clr-light-black-2;
+
+}
+
+.btn-switch{
+    @include mixins.btn(vars.$fw-reg, vars.$fs-rg, none, vars.$clr-orange-100, vars.$clr-white);
+    display: inline-block;
+    padding: .5rem .8rem;
+    border-radius: 4px;
+    transition: .5s ease;
+}
+
+.btn-switch:hover{
+    @include mixins.btn(vars.$fw-semibold, vars.$fs-rg, none, vars.$clr-orange-200, vars.$clr-light-black-2);
+    padding: .7rem 1rem;
+}
+
+.btn-close-modal{
+    @include mixins.btn(vars.$fw-reg, vars.$fs-rg, none, vars.$clr-orange-100, vars.$clr-white);
+    display: inline-block;
+    padding: .5rem .8rem;
+    border-radius: 4px;
+    transition: .5s ease;
+}
+
+.btn-close-modal:hover{
+    @include mixins.btn(vars.$fw-semibold, vars.$fs-rg,
+    none, vars.$clr-red, vars.$clr-light-black-2);
+    padding: .7rem 1rem;
+}
+
+.btn-like-modal{
+    @include mixins.btn(vars.$fw-reg, vars.$fs-rg, 
+    none, vars.$clr-dark-green, vars.$clr-white);
+    display: inline-block;
+    padding: .5rem .8rem;
+    border-radius: 4px;
+    transition: .5s ease;
+}
+
+.btn-like-modal:hover{
+    @include mixins.btn(vars.$fw-semibold, vars.$fs-rg,
+    none, vars.$clr-light-green, vars.$clr-light-black-2);
+    padding: .7rem 1rem;
+}
+
