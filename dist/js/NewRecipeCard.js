@@ -1,4 +1,4 @@
-app.component('recipe-card',{
+app.component('new-recipe-card',{
     props:{
         image:{
             type: String
@@ -38,7 +38,7 @@ app.component('recipe-card',{
     `
     
     <div class="box p-3">
-    <img data-bs-toggle="modal" data-bs-target="#staticBackdrop" v-bind:src="image" class="img-recipe" alt="featured recipe">
+    <img href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" v-bind:src="image" class="img-recipe" alt="featured recipe">
     <div class=" p-0">
         <p class="pt-3 product-category">{{ category }}</p>
         <h5 class="product-title">{{ name }}</h5>
@@ -58,13 +58,7 @@ app.component('recipe-card',{
     </div>
     
 </div>
-        <a href="#">
-            <img class="like-btn" src="./svg/star-solid.svg" alt="like">
-        </a>
-        <!--<button class="btn btn-success">Unlike</button>-->
-        <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            <img class="view-recipe-btn" src="./images/ojo-ver-receta.png" alt="view recipe">
-        </a>    </div>
+</div>
 </div>
 
      `

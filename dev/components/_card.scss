@@ -52,6 +52,7 @@ width: 100%;
 vertical-align: middle;
 overflow: clip;
 transition: .5s ease;
+cursor: pointer;
 
 *, ::after, ::before {
     box-sizing: border-box;
@@ -91,8 +92,18 @@ span{
             
 }
 
+.new-recipe-img{
+            
+    border-radius: 10px;
+    width: 70%;
+    vertical-align: middle;
+    overflow: clip;
+    transition: .5s ease;
+    
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
 
-
-
+}
     
  

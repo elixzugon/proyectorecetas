@@ -392,6 +392,7 @@ hr {
   overflow: clip;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+  cursor: pointer;
 }
 .img-recipe *, .img-recipe ::after, .img-recipe ::before {
   -webkit-box-sizing: border-box;
@@ -426,6 +427,19 @@ hr {
 .box:hover .img-recipe {
   -webkit-box-shadow: -1px 2px 14px 1px rgb(0, 0, 0);
           box-shadow: -1px 2px 14px 1px rgb(0, 0, 0);
+}
+
+.new-recipe-img {
+  border-radius: 10px;
+  width: 70%;
+  vertical-align: middle;
+  overflow: clip;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.new-recipe-img *, .new-recipe-img ::after, .new-recipe-img ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* VARIABLES*/
