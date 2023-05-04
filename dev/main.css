@@ -158,6 +158,12 @@ footer nav a:hover {
   padding: 1.5rem;
 }
 
+hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid #d54630;
+}
+
 /* VARIABLES*/
 /* custum properties - constants */
 /* custom properties - constants */

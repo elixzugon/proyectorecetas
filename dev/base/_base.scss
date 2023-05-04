@@ -103,4 +103,9 @@ footer{
     @include mixins.set-font(vars.$fw-light, vars.$fs-sm, vars.$clr-white);
     padding:1.5rem;    }
 
+hr {
+        margin: 2rem 0;
+        border: none;
+        border-top: 1px solid rgba(vars.$clr-orange-100, 1);
+ }
 
