@@ -419,7 +419,7 @@ hr {
 
 .img-recipe {
   border-radius: 10px;
-  width: 100%;
+  max-height: 400px;
   vertical-align: middle;
   overflow: clip;
   -webkit-transition: 0.5s ease;

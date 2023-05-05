@@ -64,7 +64,8 @@ app.component('recipe-card',{
         <!--<button class="btn btn-success">Unlike</button>-->
         <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             <img class="view-recipe-btn" src="./images/ojo-ver-receta.png" alt="view recipe">
-        </a>    </div>
+        </a>
+        </div>
 </div>
 
      `
