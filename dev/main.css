@@ -48,6 +48,22 @@
   color: hsl(6deg, 45%, 64%);
 }
 
+.profile-data {
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: rgb(37, 37, 37);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.profile-data-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #d54630;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 header {
   background: #d54630;
   display: -webkit-box;
@@ -203,6 +219,22 @@ hr {
   font-weight: 700;
   font-size: 2.125rem;
   color: hsl(6deg, 45%, 64%);
+}
+
+.profile-data {
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: rgb(37, 37, 37);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.profile-data-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #d54630;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* VARIABLES*/
@@ -727,6 +759,22 @@ h1 {
   font-weight: 700;
   font-size: 2.125rem;
   color: hsl(6deg, 45%, 64%);
+}
+
+.profile-data {
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: rgb(37, 37, 37);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.profile-data-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #d54630;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .modal-container {

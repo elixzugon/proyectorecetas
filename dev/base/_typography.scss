@@ -25,3 +25,15 @@
         @include mixins.set-font(vars.$fw-bold, vars.$fs-mdl, vars.$clr-orange-200);
     }
   }
+
+  .profile-data{
+    @include mixins.set-font(vars.$fw-light, vars.$fs-rg, vars.$clr-light-black-2);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .profile-data-title{
+    @include mixins.set-font(vars.$fw-bold, vars.$fs-rg, vars.$clr-orange-100);
+    text-align: center;
+    text-transform: uppercase;
+  }
