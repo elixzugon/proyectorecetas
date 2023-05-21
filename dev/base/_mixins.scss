@@ -1,4 +1,4 @@
-@use 'vars';
+@use '../abstracts/vars';
 // font mixin
 @mixin set-font($fweight, $fsize, $fcolor){
     font-weight: $fweight;

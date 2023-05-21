@@ -36,61 +36,37 @@ methods:{
     /*html*/ 
     `
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-width">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">{{ name }}</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <img class="d-block m-auto img-fluid" v-bind:src="image" alt="{{ name }}">
-        <h2 class="ingredients-title text-center pt-2 pb-3">INGREDIENTES</h1>      
-        <ol class="ms-3 mb-3 mt-3">
-        <li > LECHUGA</li>
-        <li> TOMATE</li>
-        <li> CEBOLLA MORADA</li>
-        <li> ALMEENDRAS Y NUECES</li>
-        <li> ACEITE DE OLIVO</li>
-        
-        </ol>
-       <!-- <p class="text-center fs-6">{{ ingredients }}</p>-->
-          <h2 class="ingredients-title">PREPARACIÓN</h2>
-            <div class="pt-2 ps-2 pe-2 ">  
-            <p class="fst-italic fw-light fs-5 ps-4 pe-4">{{ instructions }}</p>
-            </div>
-            <div class="row pt-2 ps-2 pe-2">
-            <div class="col">
-              <p class="times-title ps-2 pe-2">Tiempo de preparación: </p> 
-            </div>
-            <div class="col ">
-              <p class="times-title ps-2 pe-2">Tiempo de cocción:</p> 
-            </div>
-            <div class="col ">
-              <p class="times-title ps-2 pe-2">Tiempo total:</p> 
+        <div class="row">
+        <div class="col-sm-4">
+        <h2 class="modal-titles">INGREDIENTES</h1>      
+        <div class="ms-3 mb-3 mt-3 ingredients">
+        <p > LECHUGA</p>
+        <p> TOMATE</li>
+        <p> CEBOLLA MORADA</p>
+        <p> ALMEENDRAS Y NUECES</p>
+        <p> ACEITE DE OLIVO</p>
         </div>
-            </div>
-            <div class="row">
-            <div class="col">
-              <p class="times-descriptions">30 min</p> 
-            </div>
-            <div class="col">
-              <p class="times-descriptions">0 min</p> 
-            </div>
-            <div class="col">
-              <p class="times-descriptions">30 min</p> 
         </div>
-            </div>
+        <div class="col-sm-4">
+        <h2 class="modal-titles">PREPARACIÓN</h1>      
 
-            <div class="row">
-            <div class="col">
-              <p class="times-title">PORCIONES</P>
-            </div>
-            </div>
+        <p class="ingredients">{{ instructions }}</p>
+        </div>
 
-            <div class="row">
-            <div class="col">
-              <p class="times-descriptions">PORCIONES</P>
-            </div>
-            </div>
+        <div class="col-sm-4">
+        <h2 class="modal-titles">PORCIONES</h1>      
+
+        <p class="ingredients">14</p>
+        </div>
+
+        </div>
 
           <div class="modal-footer">
           <button type="button" class="btn-like-modal" v-on:click="onClickPrev()">Like</button>

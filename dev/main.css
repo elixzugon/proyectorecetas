@@ -792,10 +792,19 @@ ol li {
   color: rgb(37, 37, 37);
 }
 
-.ingredients-title {
+.modal-titles {
   font-weight: 900;
   font-size: 2.125rem;
   color: #d54630;
+  padding-top: 3rem;
+  padding-left: 3rem;
+}
+
+.ingredients {
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: #d54630;
+  padding-right: 4rem;
 }
 
 .times-title {
@@ -806,6 +815,12 @@ ol li {
 }
 
 .times-descriptions {
+  font-weight: 300;
+  font-size: 1.125rem;
+  color: #d54630;
+}
+
+.instructions-description {
   font-weight: 300;
   font-size: 1.125rem;
   color: #d54630;
@@ -893,4 +908,8 @@ ol li {
   background-color: rgb(146, 255, 132);
   color: rgb(37, 37, 37);
   padding: 0.7rem 1rem;
+}
+
+.modal-width {
+  max-width: 1900px;
 }

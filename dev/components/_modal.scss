@@ -1,5 +1,5 @@
 @use '../abstracts/media-queries';
-@use '../abstracts/mixins';
+@use '../base/mixins';
 @use '../abstracts/vars';
 @use '../base/typography';
 .modal-container{
@@ -13,10 +13,16 @@ ol{
     }
 }
 
-.ingredients-title{
+.modal-titles{
     @include mixins.set-font(vars.$fw-xbold, vars.$fs-mdl, vars.$clr-orange-100);
-
+    padding-top: 3rem;
+    padding-left: 3rem;
 } 
+
+.ingredients{
+    @include mixins.set-font(vars.$fw-light, vars.$fs-rg, vars.$clr-orange-100);
+    padding-right: 4rem; 
+}
 
 .times-title{
     @include mixins.set-font(vars.$fw-semibold, vars.$fs-rg, vars.$clr-orange-100);
@@ -24,6 +30,10 @@ ol{
 }
 
 .times-descriptions{
+    @include mixins.set-font(vars.$fw-light, vars.$fs-sm, vars.$clr-orange-100);
+}
+
+.instructions-description{
     @include mixins.set-font(vars.$fw-light, vars.$fs-sm, vars.$clr-orange-100);
 }
 
@@ -77,3 +87,6 @@ background-color: vars.$clr-light-black-2;
     padding: .7rem 1rem;
 }
 
+.modal-width{
+    max-width: 1900px;    
+}
