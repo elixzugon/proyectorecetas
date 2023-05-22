@@ -19,7 +19,7 @@ app.component('header-nav',{
                 <a href="#blogs">blogs</a>
                 <a href="#top_10">top 10</a>
                 <a href="#guardados">guardados</a>
-                <a href="#favoritos">favoritos</a>
+                <a href="#mas_votadas">más votadas</a>
                 <a href="#perfil">perfil</a>
             </ul>
         <form class="d-flex" role="search">

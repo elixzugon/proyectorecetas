@@ -27,18 +27,35 @@ app.component('recipe-card',{
             type: Number,
             default: 1
         },
-    },
-    data(){
-        return{
-            counter: 0
+        index:{
+            type: Number
         }
     },
+    
+    methods:{
+        onClickLike(){
+            //console.log("LIKE");
+            this.$emit('recipelike', this.index);
+            //this.recipe_likes++;
+        },
+        onClickUnlike(){
+            //console.log("UNLIKE");
+            this.$emit('recipeunlike', this.index);
+    
+        },
+        onClickViewRecipe(){
+            console.log("VIEW");
+            this.$emit('recipedetails', this.index);
+            //this.$test.emit('foo',"works!");
+        },
+     },
+
     template:
     /*html*/ 
     `
     
     <div class="box p-3">
-    <img data-bs-toggle="modal" data-bs-target="#staticBackdrop" v-bind:src="image" class="img-recipe" alt="featured recipe">
+    <img v-bind:src="image" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="img-recipe" alt="featured recipe">
     <div class=" p-0">
         <p class="pt-3 product-category">{{ category }}</p>
         <h5 class="product-title">{{ name }}</h5>
@@ -58,11 +75,11 @@ app.component('recipe-card',{
     </div>
     
 </div>
-        <a href="#">
-            <img class="like-btn" src="./svg/star-solid.svg" alt="like">
+        <a href="#" v-on:click="onClickLike()">
+            <img  class="like-btn" src="./svg/star-solid.svg" alt="like">
         </a>
         <!--<button class="btn btn-success">Unlike</button>-->
-        <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <a href="#" v-on:click="onClickViewRecipe()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             <img class="view-recipe-btn" src="./images/ojo-ver-receta.png" alt="view recipe">
         </a>
         </div>
