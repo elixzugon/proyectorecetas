@@ -1,3 +1,6 @@
+//INTENTAR HACER ESTO PERO CON SU PROPIO CARD PARA PODER LLAMAR LOS MÁS NUEVOS EN OTRO DISTINTO
+
+
 const app = Vue.createApp({
     data() {
         return {
@@ -41,7 +44,7 @@ const app = Vue.createApp({
 
         axios({
             method: 'get',
-            url: 'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=5307c86c068f49209b1fe0e7bafc68df'
+            url: 'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=de032a1a8b53411da58d0eff0000f438'
         })
             .then(
                 (response) => {
@@ -59,9 +62,9 @@ const app = Vue.createApp({
                             image: element.image,
                             name: element.title,
                             category: element.category,
-                            time: "20 mins",
+                            time:  element.readyInMinutes + "mins",
                             level: "Easy",
-                            likes: 18,
+                            likes: element.aggregateLikes,
                             ingredients: "NA",
                             instructions: "NA"
                         })
@@ -98,7 +101,7 @@ const app = Vue.createApp({
             //get recipe details
             axios({
                 method: 'get',
-                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=5307c86c068f49209b1fe0e7bafc68df'
+                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=de032a1a8b53411da58d0eff0000f438'
             })
                 .then(
                     (response) => {
@@ -135,7 +138,7 @@ const app = Vue.createApp({
       
                 axios({
                     method: 'get',
-                    url: 'https://api.spoonacular.com/recipes/complexSearch?type='+category+'&apiKey=5307c86c068f49209b1fe0e7bafc68df' 
+                    url: 'https://api.spoonacular.com/recipes/complexSearch?type='+category+'&apiKey=de032a1a8b53411da58d0eff0000f438' 
                 })
                     .then(
                         (response) => {
@@ -153,6 +156,7 @@ const app = Vue.createApp({
                                     id: element.id,
                                     image: element.image,
                                     name: element.title,
+                                    selectedcategory: this.category,
                                     time: "20 mins",
                                     level: "Easy",
                                     likes: 18,

@@ -357,6 +357,67 @@ hr {
           transform: scaleY(1);
 }
 
+.btn-group .button {
+  text-transform: capitalize;
+  font-weight: 300;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.125rem;
+  border: none;
+  background-color: #d54630;
+  color: hsl(0deg, 0%, 100%);
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  border: 1px solid hsl(6deg, 45%, 64%);
+  border-radius: 5px;
+  margin: 5px 1px;
+}
+
+.btn-group {
+  display: inline-block;
+}
+
+.btn-group .button:hover {
+  font-weight: 700;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.125rem;
+  border: none;
+  background-color: hsl(6deg, 45%, 64%);
+  color: rgb(37, 37, 37);
+}
+
+.btn-group .button:active, .btn-group .button:focus {
+  font-weight: 700;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.125rem;
+  border: none;
+  background-color: hsl(6deg, 45%, 64%);
+  color: rgb(37, 37, 37);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container-btn {
+  margin: 0 0 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 /* VARIABLES*/
 /* custum properties - constants */
 /* custom properties - constants */
@@ -395,7 +456,7 @@ hr {
 
 .product-title { /*titulo productos*/
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2.125rem;
   color: hsl(0deg, 0%, 100%);
   text-transform: uppercase;
 }
@@ -606,6 +667,67 @@ hr {
 .header .search-form.active {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
+}
+
+.btn-group .button {
+  text-transform: capitalize;
+  font-weight: 300;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.125rem;
+  border: none;
+  background-color: #d54630;
+  color: hsl(0deg, 0%, 100%);
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  border: 1px solid hsl(6deg, 45%, 64%);
+  border-radius: 5px;
+  margin: 5px 1px;
+}
+
+.btn-group {
+  display: inline-block;
+}
+
+.btn-group .button:hover {
+  font-weight: 700;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.125rem;
+  border: none;
+  background-color: hsl(6deg, 45%, 64%);
+  color: rgb(37, 37, 37);
+}
+
+.btn-group .button:active, .btn-group .button:focus {
+  font-weight: 700;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.125rem;
+  border: none;
+  background-color: hsl(6deg, 45%, 64%);
+  color: rgb(37, 37, 37);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container-btn {
+  margin: 0 0 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 h1 {

@@ -44,13 +44,13 @@ app.component('new-recipe-slider',{
     </div>
     <div class="carousel-inner">
     <div class="carousel-item active ">
-        <new-recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes="20"></recipe-card>
+        <new-recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes=2></new-recipe-card>
     </div>
     <div class="carousel-item">
-        <new-recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes="20"></recipe-card>
+        <new-recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes=2></new-recipe-card>
     </div>
     <div class="carousel-item">
-        <new-recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes="20"></recipe-card>
+        <new-recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes=2></new-recipe-card>
     </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

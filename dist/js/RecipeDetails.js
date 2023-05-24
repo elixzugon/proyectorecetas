@@ -45,23 +45,23 @@ methods:{
         <img class="d-block m-auto img-fluid" v-bind:src="image" alt="{{ name }}">
         <div class="row">
         <div class="col-sm-4">
-        <h2 class="modal-titles">INGREDIENTES</h1>      
+        <h1 class="modal-titles">INGREDIENTES</h1>      
         <div class="ms-3 mb-3 mt-3 ingredients">
         <p > LECHUGA</p>
-        <p> TOMATE</li>
+        <p> TOMATE</p>
         <p> CEBOLLA MORADA</p>
         <p> ALMEENDRAS Y NUECES</p>
         <p> ACEITE DE OLIVO</p>
         </div>
         </div>
         <div class="col-sm-4">
-        <h2 class="modal-titles">PREPARACIÓN</h1>      
+        <h1 class="modal-titles">PREPARACIÓN</h1>      
 
         <p class="ingredients">{{ instructions }}</p>
         </div>
 
         <div class="col-sm-4">
-        <h2 class="modal-titles">PORCIONES</h1>      
+        <h1 class="modal-titles">PORCIONES</h1>      
 
         <p class="ingredients">14</p>
         </div>

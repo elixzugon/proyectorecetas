@@ -87,4 +87,38 @@ padding: 0.9rem 3rem;
 }
 }
 
+.btn-group .button {
+    text-transform: capitalize;
+    @include mixins.btn(vars.$fw-light, vars.$fs-sm, none, vars.$clr-orange-100, vars.$clr-white);
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid vars.$clr-orange-200;
+    border-radius: 5px;
+    margin: 5px 1px;
+}
+.btn-group {
+    display: inline-block;
+}
+.btn-group .button:hover {
+    @include mixins.btn(vars.$fw-bold, vars.$fs-sm, none, vars.$clr-orange-200, vars.$clr-light-black-2);
+
+}
+.btn-group .button:active, .btn-group .button:focus {
+    @include mixins.btn(vars.$fw-bold, vars.$fs-sm, none, vars.$clr-orange-200, vars.$clr-light-black-2);
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-btn {
+    margin: 0 0 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
 

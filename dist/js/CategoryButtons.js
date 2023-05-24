@@ -14,5 +14,9 @@ app.component('category-button',{
 
     template:
     /*html*/ 
-    `<button class='btn btn-dark' v-on:click="onClickCategoryButton" >{{ name }}</button>`
-})
+    `
+
+      <button class="button" v-on:click="onClickCategoryButton" >{{ name }}</button>
+
+    `
+})  

@@ -27,7 +27,7 @@
      }
 
 .product-title { /*titulo productos*/
-@include mixins.set-font(vars.$fw-xbold, vars.$fs-mdxl, vars.$clr-white);
+@include mixins.set-font(vars.$fw-xbold, vars.$fs-mdl, vars.$clr-white);
 text-transform: uppercase;
 
  }
