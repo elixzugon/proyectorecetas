@@ -48,6 +48,12 @@
   color: hsl(6deg, 45%, 64%);
 }
 
+.category-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #d54630;
+}
+
 .profile-data {
   font-weight: 300;
   font-size: 1.25rem;
@@ -219,6 +225,12 @@ hr {
   font-weight: 700;
   font-size: 2.125rem;
   color: hsl(6deg, 45%, 64%);
+}
+
+.category-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #d54630;
 }
 
 .profile-data {
@@ -881,6 +893,12 @@ h1 {
   font-weight: 700;
   font-size: 2.125rem;
   color: hsl(6deg, 45%, 64%);
+}
+
+.category-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #d54630;
 }
 
 .profile-data {

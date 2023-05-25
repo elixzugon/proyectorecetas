@@ -7,7 +7,7 @@ app.component('header-nav',{
        <a href="#" class="logo">
         <img src="images/Logo-cook-it.png" alt="Logo-cook-it">
        </a>
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg text-center ">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -16,9 +16,7 @@ app.component('header-nav',{
             
                 <a href="#inicio">inicio</a>
                 <a href="#acerca_de">acerca de</a>
-                <a href="#blogs">blogs</a>
-                <a href="#top_10">top 10</a>
-                <a href="#guardados">guardados</a>
+                <a href="C:\laragon\www\proyectorecetas\dist\profile.html">guardados</a>
                 <a href="#mas_votadas">más votadas</a>
                 <a href="#perfil">perfil</a>
             </ul>

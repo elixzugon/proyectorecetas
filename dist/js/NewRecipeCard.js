@@ -27,18 +27,33 @@ app.component('new-recipe-card',{
             type: Number,
             default: 1
         },
-    },
-    data(){
-        return{
-            counter: 0
+        index:{
+            type: Number
         }
     },
+    methods:{
+        onClickLike(){
+            //console.log("LIKE");
+            this.$emit('recipelike', this.index);
+            //this.recipe_likes++;
+        },
+        onClickUnlike(){
+            //console.log("UNLIKE");
+            this.$emit('recipeunlike', this.index);
+    
+        },
+        onClickViewRecipe(){
+            console.log("VIEW");
+            this.$emit('recipedetails', this.index);
+            //this.$test.emit('foo',"works!");
+        },
+     },
     template:
     /*html*/ 
     `
     
     <div class="box p-3">
-    <img href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" v-bind:src="image" class="img-recipe" alt="featured recipe">
+    <img v-bind:src="image" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="img-recipe" alt="featured recipe">
     <div class=" p-0">
         <p class="pt-3 product-category">{{ category }}</p>
         <h5 class="product-title">{{ name }}</h5>
@@ -47,10 +62,6 @@ app.component('new-recipe-card',{
 
     <div class="col">
         <p>{{ time }}</p>
-    </div>
-
-    <div class="col">
-        <p>{{ level }}</p>
     </div>
 
     <div class="col">

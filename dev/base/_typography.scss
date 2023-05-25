@@ -26,6 +26,13 @@
     }
   }
 
+//CATEGORY STYLE
+
+  .category-title{
+    @include mixins.set-font(vars.$fw-bold, vars.$fs-rg, vars.$clr-orange-100);
+
+  }
+
   .profile-data{
     @include mixins.set-font(vars.$fw-light, vars.$fs-rg, vars.$clr-light-black-2);
     text-align: center;

@@ -44,14 +44,16 @@ app.component('new-recipe-slider',{
     </div>
     <div class="carousel-inner">
     <div class="carousel-item active ">
-        <new-recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes=2></new-recipe-card>
+    <!--    <new-recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes=2></new-recipe-card>
     </div>
     <div class="carousel-item">
         <new-recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes=2></new-recipe-card>
-    </div>
+    </div>-->
     <div class="carousel-item">
-        <new-recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes=2></new-recipe-card>
-    </div>
+    <div v-for="(item, index) in recipes">
+    <recipe-card :image="item.image" :category="item.category" :name="item.name" :description="item.description" :time="item.time" :level="item.level" :likes="item.likes" :index="item.id" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"
+    v-on:recipedetails="onClickRecipeDetails"></recipe-card>
+    </div>      </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
