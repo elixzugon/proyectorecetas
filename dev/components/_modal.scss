@@ -15,13 +15,10 @@ ol{
 
 .modal-titles{
     @include mixins.set-font(vars.$fw-xbold, vars.$fs-mdl, vars.$clr-orange-100);
-    padding-top: 3rem;
-    padding-left: 3rem;
 } 
 
 .ingredients{
-    @include mixins.set-font(vars.$fw-light, vars.$fs-rg, vars.$clr-orange-100);
-    padding-right: 4rem; 
+    @include mixins.set-font(vars.$fw-light, vars.$fs-rg, vars.$clr-orange-100); 
 }
 
 .times-title{
@@ -90,3 +87,67 @@ background-color: vars.$clr-light-black-2;
 .modal-width{
     max-width: 1900px;    
 }
+
+.modal-img-row{
+    background: vars.$clr-light-black-3;
+    border-bottom:solid 0.3rem;
+    border-top:solid 0.3rem;
+    border-color: vars.$clr-orange-100;
+    width: auto;
+    max-width: 1900px;
+    margin-left: 0.01rem;
+    margin-right: 0.01rem;
+}
+
+.modal-image {
+    margin: auto;
+    max-width: 100%;
+    max-height: 600px;
+    height: 600px;
+    @include media-queries.respond-to(media-queries.$phone){
+    height: auto;
+    }
+}
+
+.modal-recipe-name{
+    @include mixins.set-font(vars.$fw-xbold, vars.$fs-mdl, vars.$clr-orange-100);
+} 
+
+.modal-recipe-summary{
+    @include mixins.set-font(vars.$fw-reg, vars.$fs-rg, vars.$clr-light-black-2);
+} 
+
+.modal-details-row{
+    border:solid 0.1rem;
+    border-color: vars.$clr-orange-100;
+    border-radius: .5rem;
+    padding: 0.5rem 0;
+    width: auto;
+    max-width: 1900px;
+    margin-left: 0.01rem;
+    margin-right: 0.01rem;
+    div{
+        align-items: center;
+        text-align: center;
+        border-left: solid 0.1rem;
+        border-color: vars.$clr-orange-100;
+        padding-left: 0px;
+        padding-right: 0px;
+
+        h3{
+            @include mixins.set-font(vars.$fw-semibold, vars.$fs-rg, vars.$clr-orange-100);
+            @include media-queries.respond-to(media-queries.$phone){
+                @include mixins.set-font(vars.$fw-semibold, vars.$fs-xsm, vars.$clr-orange-100);                
+            }
+        }
+
+        p{
+            @include mixins.set-font(vars.$fw-light, vars.$fs-sm, vars.$clr-black);
+            @include media-queries.respond-to(media-queries.$phone){
+                @include mixins.set-font(vars.$fw-light, vars.$fs-xsm, vars.$clr-white);                
+            }
+        }
+    }
+
+}
+

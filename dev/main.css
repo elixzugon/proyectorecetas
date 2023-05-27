@@ -936,15 +936,12 @@ ol li {
   font-weight: 900;
   font-size: 2.125rem;
   color: #d54630;
-  padding-top: 3rem;
-  padding-left: 3rem;
 }
 
 .ingredients {
   font-weight: 300;
   font-size: 1.25rem;
   color: #d54630;
-  padding-right: 4rem;
 }
 
 .times-title {
@@ -1052,4 +1049,84 @@ ol li {
 
 .modal-width {
   max-width: 1900px;
+}
+
+.modal-img-row {
+  background: rgb(202, 202, 202);
+  border-bottom: solid 0.3rem;
+  border-top: solid 0.3rem;
+  border-color: #d54630;
+  width: auto;
+  max-width: 1900px;
+  margin-left: 0.01rem;
+  margin-right: 0.01rem;
+}
+
+.modal-image {
+  margin: auto;
+  max-width: 100%;
+  max-height: 600px;
+  height: 600px;
+}
+@media only screen and (max-width: 480px) {
+  .modal-image {
+    height: auto;
+  }
+}
+
+.modal-recipe-name {
+  font-weight: 900;
+  font-size: 2.125rem;
+  color: #d54630;
+}
+
+.modal-recipe-summary {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: rgb(37, 37, 37);
+}
+
+.modal-details-row {
+  border: solid 0.1rem;
+  border-color: #d54630;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  width: auto;
+  max-width: 1900px;
+  margin-left: 0.01rem;
+  margin-right: 0.01rem;
+}
+.modal-details-row div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-left: solid 0.1rem;
+  border-color: #d54630;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.modal-details-row div h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #d54630;
+}
+@media only screen and (max-width: 480px) {
+  .modal-details-row div h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #d54630;
+  }
+}
+.modal-details-row div p {
+  font-weight: 300;
+  font-size: 1.125rem;
+  color: black;
+}
+@media only screen and (max-width: 480px) {
+  .modal-details-row div p {
+    font-weight: 300;
+    font-size: 1rem;
+    color: hsl(0deg, 0%, 100%);
+  }
 }

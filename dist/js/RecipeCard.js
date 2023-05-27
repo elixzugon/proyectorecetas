@@ -55,10 +55,10 @@ app.component('recipe-card',{
     `
     
     <div class="box p-3">
-    <img v-bind:src="image" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="img-recipe" alt="featured recipe">
+    <img v-bind:src="image" v-on:click="onClickViewRecipe()" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="img-recipe" alt="featured recipe">
     <div class=" p-0">
         <h5 class="pt-5 product-title">{{ name }}</h5>
-<div class="product-details row">
+    <div class="product-details row">
 
     <div class="col">
         <p>{{ likes }}</p>
@@ -68,7 +68,6 @@ app.component('recipe-card',{
         <p>{{ time }}</p>
     </div>
 
-    
 </div>
         <div class="row">
             <div class="col">
