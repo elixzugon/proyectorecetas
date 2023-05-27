@@ -46,7 +46,7 @@ const app = Vue.createApp({
 
         axios({
             method: 'get',
-            url: 'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=1f9b7c6bd0444737abe9d1870a3c8748'
+            url: 'https://api.spoonacular.com/recipes/complexSearch?type=main course&apiKey=e7676fb679264a9b8c98d36a25c724fa'
         })
             .then(
                 (response) => {
@@ -85,7 +85,7 @@ const app = Vue.createApp({
             for(let i =0; i < this.recipes.length; i++){
                 axios({
                     method: 'get',
-                    url: 'https://api.spoonacular.com/recipes/'+this.recipes[i].id+'/information?includeNutrition=false&apiKey=1f9b7c6bd0444737abe9d1870a3c8748'
+                    url: 'https://api.spoonacular.com/recipes/'+this.recipes[i].id+'/information?includeNutrition=false&apiKey=e7676fb679264a9b8c98d36a25c724fa'
                 })
                     .then(
                         (response) => {
@@ -133,7 +133,7 @@ const app = Vue.createApp({
             //get recipe details
             axios({
                 method: 'get',
-                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=1f9b7c6bd0444737abe9d1870a3c8748'
+                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=e7676fb679264a9b8c98d36a25c724fa'
             })
                 .then(
                     (response) => {
@@ -151,15 +151,23 @@ const app = Vue.createApp({
                         this.recipe.level = "Easy";
                         this.recipe.like = item.aggregateLikes;
                         this.recipe.instructions = item.instructions;
+                        this.recipe.portions = item.servings;
+                        this.recipe.description= item.summary;
 
+                        //get ingredients array
                         let ingredientsList = "";
                         for(let i = 0; i < item.extendedIngredients.length; i++){
                             ingredientsList += item.extendedIngredients[i].original + "\n";
                         }
-
                         this.recipe.ingredients = ingredientsList;
+
+                        let occasionsList = "";
+                        for(let i = 0; i < item.occasions.length; i++){
+                            occasion += item.occasions + "\n";
+                        }
+                        this.recipe.occasion = occasionsList;
+
                         this.fillDataDetails();
-   
                     }
                 )
                 .catch(
@@ -171,7 +179,7 @@ const app = Vue.createApp({
       
                 axios({
                     method: 'get',
-                    url: 'https://api.spoonacular.com/recipes/complexSearch?type='+category+'&apiKey=1f9b7c6bd0444737abe9d1870a3c8748' 
+                    url: 'https://api.spoonacular.com/recipes/complexSearch?type='+category+'&apiKey=e7676fb679264a9b8c98d36a25c724fa' 
                 })
                     .then(
                         (response) => {

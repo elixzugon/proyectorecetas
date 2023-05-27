@@ -19,9 +19,12 @@ app.component('recipe-details', {
       type: String
     },
     portions: {
-      type: String
+      type: Number
     },
     time: {
+      type: String
+    },
+    occasion: {
       type: String
     },
 
@@ -63,7 +66,7 @@ methods:{
 
           <div class="col mt-4 ms-3 me-3 pe-3 ps-3 pb-4 summary-content">
               <h1 class="modal-recipe-name">{{ name }}</h1>
-              <p class="modal-recipe-summary">asdadasdadsdawdwa {{ description }}</p>
+              <p class="modal-recipe-summary"> {{ description }}</p>
 
               <div class="row modal-details-row">
 
@@ -91,11 +94,7 @@ methods:{
         <div class="col">
         <h1 class="modal-titles">INGREDIENTES</h1>      
         <div class="mb-3 mt-3 ingredients">
-        <p > LECHUGA</p>
-        <p> TOMATE</p>
-        <p> CEBOLLA MORADA</p>
-        <p> ALMEENDRAS Y NUECES</p>
-        <p> ACEITE DE OLIVO</p>
+        <p> {{ ingredients }}</p>
         </div>
         </div>
         
@@ -105,6 +104,25 @@ methods:{
         <p class="ingredients">{{ instructions }}</p>
         </div>
         </div>
+
+        <div class="row modal-details-row">
+
+        <div class="col">
+          <h3>OCASIÓN</h3>
+          <p>{{ occasion }}</p>
+        </div>
+                      
+        <div class="col">
+          <h3>PORCIONES</h3>
+          <p>{{ portions }}</p>
+        </div>
+                                                  
+        <div class="col">
+          <h3>TIEMPO</h3>
+          <p>{{ time }}</p>
+        </div>
+        
+      </div>
 
           <div class="modal-footer">
           
