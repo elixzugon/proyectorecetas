@@ -48,11 +48,16 @@ transition: 1s ease;
 .img-recipe{
             
 border-radius: 10px;
-max-height: 400px;
+max-height: auto;
+max-width: 280px;
 vertical-align: middle;
 overflow: clip;
 transition: .5s ease;
 cursor: pointer;
+
+@include media-queries.respond-to(media-queries.$phone){
+    max-width: 150px;
+}
 
 *, ::after, ::before {
     box-sizing: border-box;
@@ -106,5 +111,8 @@ span{
 
 }
 
+.colorize-orange{
+    background-color: vars.$clr-orange-100;
+}
 
  

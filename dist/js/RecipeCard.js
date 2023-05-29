@@ -46,6 +46,8 @@ app.component('recipe-card',{
         onClickViewRecipe(){
             console.log("VIEW");
             this.$emit('recipedetails', this.index);
+            this.$emit('selectedrecipe', this.index); // Emitir evento 'selectedrecipe' con el índice de la receta seleccionada
+              
             //this.$test.emit('foo',"works!");
         },
      },
@@ -69,6 +71,8 @@ app.component('recipe-card',{
     </div>
 
 </div>
+</div>
+
         <div class="row">
             <div class="col">
             <a href="#" v-on:click="onClickLike()">

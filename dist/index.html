@@ -86,7 +86,7 @@
     </div>
 <!--CARDS-->    
     <div class="pt-1 row align-items-start text-center">
-<div v-for="(item, index) in recipes" class="col-sm-3 pt-1">
+<div v-bind:src="item.id" v-for="(item, index) in recipes" class="col-sm-3 pt-1">
 <recipe-card :image="item.image" :category="item.category" :name="item.name" :description="item.description" :time="item.time" :level="item.level" :likes="item.likes" :index="item.id" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"
 v-on:recipedetails="onClickRecipeDetails"></recipe-card>
 </div>    
@@ -96,32 +96,14 @@ v-on:recipedetails="onClickRecipeDetails"></recipe-card>
 <recipe-details :name="recipe.name" :ingredients="recipe.ingredients" :image="recipe.image" :instructions="recipe.instructions" :time="recipe.time" :level="recipe.level" :time="recipe.time" :portions="recipe.portions" :description="recipe.description"></recipe-details>
 <!-- END OF RECIPE CARD -->
 
+
 </section>
+<footer-p></footer-p>
 </section>
 
 <!-- END OF JS Components Section -->
 
-<footer class="text-center">
 
-    <a href="#" class="logo">
-        <img src="images/Logo-cook-it.png" alt="Logo-cook-it">
-    </a>
-    <nav>
-    <div class="container links">
-        <a href="#">Inicio</a>
-        <a href="#">Acerca de</a>
-        <a href="#">Blogs</a>
-        <a href="#">Top 10</a>
-        <a href="#">guardados</a>
-        <a href="#">Favoritos</a>
-        <a href="#">Perfil</a>
-    </div>
-    </nav>
-
-    <div class="text-center credits">created by <span class="text-light">elixzugon, sofiazugon, tonyjef</span> | all rights reserved</div>
-
-
-</footer>
 
 <!-- footer section ends -->
 
@@ -146,6 +128,7 @@ v-on:recipedetails="onClickRecipeDetails"></recipe-card>
 <script src="js/NewRecipeSlider.js"></script>
 <script src="js/NewRecipeCard.js"></script>
 <script src="js/CategoryButtons.js"></script>
+<script src="js/Footer.js"></script>
 
 <script>
     const mountedApp = app.mount("#app");

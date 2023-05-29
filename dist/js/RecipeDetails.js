@@ -105,26 +105,8 @@ methods:{
         </div>
         </div>
 
-        <div class="row modal-details-row">
 
-        <div class="col">
-          <h3>OCASIÓN</h3>
-          <p>{{ occasion }}</p>
-        </div>
-                      
-        <div class="col">
-          <h3>PORCIONES</h3>
-          <p>{{ portions }}</p>
-        </div>
-                                                  
-        <div class="col">
-          <h3>TIEMPO</h3>
-          <p>{{ time }}</p>
-        </div>
-        
-      </div>
-
-          <div class="modal-footer">
+        <div class="modal-footer">
           
       <a href="#" v-on:click="onClickLike()">
           <img  class="like-btn" src="./svg/star-solid-black.svg" alt="like">

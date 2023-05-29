@@ -430,6 +430,85 @@ hr {
       flex-wrap: wrap;
 }
 
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+}
+
+.dd-input:checked + .dd-menu {
+  display: block;
+}
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider {
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
 /* VARIABLES*/
 /* custum properties - constants */
 /* custom properties - constants */
@@ -492,12 +571,18 @@ hr {
 
 .img-recipe {
   border-radius: 10px;
-  max-height: 400px;
+  max-height: auto;
+  max-width: 280px;
   vertical-align: middle;
   overflow: clip;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   cursor: pointer;
+}
+@media only screen and (max-width: 480px) {
+  .img-recipe {
+    max-width: 150px;
+  }
 }
 .img-recipe *, .img-recipe ::after, .img-recipe ::before {
   -webkit-box-sizing: border-box;
@@ -545,6 +630,10 @@ hr {
 .new-recipe-img *, .new-recipe-img ::after, .new-recipe-img ::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.colorize-orange {
+  background-color: #d54630;
 }
 
 /* VARIABLES*/
@@ -740,6 +829,85 @@ hr {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+}
+
+.dd-input:checked + .dd-menu {
+  display: block;
+}
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider {
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
 }
 
 h1 {
@@ -1052,7 +1220,7 @@ ol li {
 }
 
 .modal-img-row {
-  background: rgb(202, 202, 202);
+  background: rgb(37, 37, 37);
   border-bottom: solid 0.3rem;
   border-top: solid 0.3rem;
   border-color: #d54630;
@@ -1083,7 +1251,11 @@ ol li {
 .modal-recipe-summary {
   font-weight: 400;
   font-size: 1.25rem;
-  color: rgb(37, 37, 37);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.darken-modal {
+  background-color: rgb(37, 37, 37) !important;
 }
 
 .modal-details-row {
@@ -1121,7 +1293,7 @@ ol li {
 .modal-details-row div p {
   font-weight: 300;
   font-size: 1.125rem;
-  color: black;
+  color: hsl(0deg, 0%, 100%);
 }
 @media only screen and (max-width: 480px) {
   .modal-details-row div p {

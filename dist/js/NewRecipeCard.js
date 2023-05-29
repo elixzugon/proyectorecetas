@@ -1,4 +1,4 @@
-app.component('new-recipe-card',{
+app.component('recipe-card',{
     props:{
         image:{
             type: String
@@ -31,6 +31,7 @@ app.component('new-recipe-card',{
             type: Number
         }
     },
+    
     methods:{
         onClickLike(){
             //console.log("LIKE");
@@ -45,31 +46,43 @@ app.component('new-recipe-card',{
         onClickViewRecipe(){
             console.log("VIEW");
             this.$emit('recipedetails', this.index);
-            //this.$test.emit('foo',"works!");
+            this.$emit('selectedrecipe', this.index); 
         },
      },
+
     template:
     /*html*/ 
     `
     
     <div class="box p-3">
-    <img v-bind:src="image" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="img-recipe" alt="featured recipe">
+    <img v-bind:src="image" v-on:click="onClickViewRecipe()" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="img-recipe" alt="featured recipe">
     <div class=" p-0">
-        <p class="pt-3 product-category">{{ category }}</p>
-        <h5 class="product-title">{{ name }}</h5>
-        <p class="product-description">{{ description }}</p>
-<div class="product-details row">
+        <h5 class="pt-5 product-title">{{ name }}</h5>
+    <div class="product-details row">
+
+    <div class="col">
+        <p>{{ likes }}</p>
+    </div>
 
     <div class="col">
         <p>{{ time }}</p>
     </div>
 
-    <div class="col">
-        <p>{{ likes }}</p>
-    </div>
-    
 </div>
 </div>
+
+        <div class="row">
+            <div class="col">
+            <a href="#" v-on:click="onClickLike()">
+                <img  class="like-btn" src="./svg/star-solid.svg" alt="like">
+            </a>
+            </div>
+            <div class="col">
+            <a href="#" v-on:click="onClickViewRecipe()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <img class="view-recipe-btn" src="./images/ojo-ver-receta.png" alt="view recipe">
+            </a>
+            </div>
+        </div>
 </div>
 
      `
