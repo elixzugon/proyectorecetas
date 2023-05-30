@@ -40,10 +40,13 @@ methods:{
   onClickPrev(){
       console.log("PREV");
       this.$emit('prevrecipe', this.index);
+
+      
   },
   onClickNext(){
       console.log("NEXT")
       this.$emit('nextrecipe', this.index);
+
   }
 
 },
@@ -113,7 +116,9 @@ methods:{
       </a>
       <a href="#" v-on:click="onClickLike()">
           <img  class="view-recipe-btn" src="./svg/black-save.svg" alt="like">
-      </a>          <button type="button" class="btn-switch" v-on:click="onClickPrev()">Prev</button>
+      </a>
+      
+          <button type="button" class="btn-switch" v-on:click="onClickPrev()">Prev</button>
           <button type="button" class="btn-switch" v-on:click="onClickNext()">Next</button>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 

@@ -36,20 +36,19 @@ app.component('profile',{
 <section class="text-center h-100 gradient-custom-2">
 <div class="py-5 h-100">
   <div class="justify-content-center align-items-center h-100">
-    <div class="text-white d-flex flex-row" style="background-color: rgb(213 70 48);
+    <div class="ps-5 text-white d-flex flex-row" style="background-color: rgb(213 70 48);
         height: 200px;">
         
         
           <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
           
           <div class="btn-group dropend">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropend
+          <button type="button" class="btn-search dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Opciones
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Menu item</a></li>
-            <li><a class="dropdown-item" href="#">Menu item</a></li>
-            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="C:/laragon/www/proyectorecetas/dist/passwordrecovery.html">Cambio de contraseña</a></li>
+            <li><a class="dropdown-item" href="C:/laragon/www/proyectorecetas/dist/login.html">Cerrar sesión</a></li>
           </ul>
         </div>
           
@@ -87,7 +86,6 @@ app.component('profile',{
           </div>
           <div class="justify-content-between align-items-center mb-4">
             <p class="profile-data-title mb-0 text-center">Recetas guardadas</p>
-            <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
           </div>
           <div class="container ps-5 pe-5 row text-center">
           <div class="col-sm-4 p-3">
