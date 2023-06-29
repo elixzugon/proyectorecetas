@@ -9,7 +9,7 @@ app.component('recipe-details', {
     ingredients: {
       type: String
     },
-    instructions: {
+    preparation_instructions: {
       type: String
     },
     description: {
@@ -21,8 +21,8 @@ app.component('recipe-details', {
     portions: {
       type: Number
     },
-    time: {
-      type: String
+    total_time: {
+      type: Number
     },
     occasion: {
       type: String
@@ -85,7 +85,7 @@ methods:{
                                                           
                 <div class="col">
                   <h3>TIEMPO</h3>
-                  <p>{{ time }}</p>
+                  <p>{{ total_time }}</p>
                 </div>
                 
               </div>
@@ -104,7 +104,7 @@ methods:{
         <div class="col">
         <h1 class="modal-titles">PREPARACIÓN</h1>      
 
-        <p class="ingredients">{{ instructions }}</p>
+        <p class="ingredients">{{ preparation_instructions }}</p>
         </div>
         </div>
 

@@ -2,13 +2,16 @@ app.component('category-button',{
     props:{
         name:{
             type: String
+        },
+        id:{
+            type: String
         }
     },
 
     methods:{
         onClickCategoryButton(){
-            console.log(this.name);
-            this.$emit('selectedcategory', this.name);
+            console.log(this.id);
+            this.$emit('selectedcategory', this.id);
         }
     },
 

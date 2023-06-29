@@ -74,7 +74,7 @@
                         <div class="container-btn" >
                             <div class="buttons">
                               <div class="btn-group">
-                                    <category-button class="pt-2" v-for="(category, index) in categories" :name="category.name"
+                                    <category-button class="pt-2" v-for="(category, index) in categories" :name="category.name" :id="category.id"
                                         v-on:selectedcategory="onClickSelectedCategory"></category-button>
                               </div>
                             </div>
@@ -93,7 +93,7 @@ v-on:recipedetails="onClickRecipeDetails"></recipe-card>
 </div>
 
 <!--RECIPE DETAILS - MODAL-->
-<recipe-details :name="recipe.name" :ingredients="recipe.ingredients" :image="recipe.image" :instructions="recipe.instructions" :time="recipe.time" :level="recipe.level" :time="recipe.time" :portions="recipe.portions" :description="recipe.description"></recipe-details>
+<recipe-details :name="recipe.name" :ingredients="recipe.ingredients" :image="recipe.image" :instructions="recipe.instructions" :total_time="recipe.total_time" :level="recipe.level"  :portions="recipe.portions" :description="recipe.description"></recipe-details>
 <!-- END OF RECIPE CARD -->
 
 

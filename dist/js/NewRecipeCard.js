@@ -1,4 +1,4 @@
-app.component('recipe-card',{
+app.component('new-recipe-card',{
     props:{
         image:{
             type: String
@@ -65,7 +65,7 @@ app.component('recipe-card',{
     </div>
 
     <div class="col">
-        <p>{{ time }}</p>
+        <p>{{ total_time }}</p>
     </div>
 
 </div>

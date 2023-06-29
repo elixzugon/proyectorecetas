@@ -15,8 +15,8 @@ app.component('recipe-card',{
             type: String,
             default: "default description"
         },
-        time:{
-            type: String,
+        total_time:{
+            type: Number,
             default: "default time"
         },
         level:{
@@ -30,6 +30,7 @@ app.component('recipe-card',{
         index:{
             type: Number
         }
+        
     },
     
     methods:{
@@ -67,7 +68,7 @@ app.component('recipe-card',{
     </div>
 
     <div class="col">
-        <p>{{ time }}</p>
+        <p>{{ level }}</p>
     </div>
 
 </div>

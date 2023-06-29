@@ -88,15 +88,7 @@ app.component('profile',{
             <p class="profile-data-title mb-0 text-center">Recetas guardadas</p>
           </div>
           <div class="container ps-5 pe-5 row text-center">
-          <div class="col-sm-4 p-3">
-          <recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes="20"></recipe-card>
-          </div>
-          <div class="col-sm-4 p-3">
-          <recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes="20"></recipe-card>
-          </div>
-          <div class="col-sm-4 p-3">
-          <recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes="20"></recipe-card>
-          </div> 
+
           </div>
        
     </div>
