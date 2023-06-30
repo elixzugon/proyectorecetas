@@ -1,38 +1,57 @@
 app.component('new-recipe-slider',{
-    props:{
-        image:{
-            type: String
-        },
-        category:{
-            type: String,
-            default: "default category"
-        },
-        name:{
-            type: String,
-            default: "default name"
-        },
-        description:{
-            type: String,
-            default: "default description"
-        },
-        time:{
-            type: String,
-            default: "default time"
-        },
-        level:{
-            type: String,
-            default: "default level"
-        },
-        likes:{
-            type: Number,
-            default: 1
-        },
+
+    image:{
+        type: String
     },
-    data(){
-        return{
-            counter: 0
-        }
+    category:{
+        type: String,
+        default: "default category"
     },
+    name:{
+        type: String,
+        default: "default name"
+    },
+    description:{
+        type: String,
+        default: "default description"
+    },
+    total_time:{
+        type: Number,
+        default: "default time"
+    },
+    level:{
+        type: String,
+        default: "default level"
+    },
+    likes:{
+        type: Number,
+        default: 1
+    },
+    index:{
+        type: Number
+    },
+
+    methods:{
+        onClickLike(){
+            //console.log("LIKE");
+            this.$emit('recipelike', this.index);
+            //this.recipe_likes++;
+        },
+        onClickUnlike(){
+            //console.log("UNLIKE");
+            this.$emit('recipeunlike', this.index);
+    
+        },
+        onClickViewRecipe(){
+            console.log("VIEW");
+            this.$emit('recipedetails', this.index);
+            this.$emit('selectedrecipe', this.index); // Emitir evento 'selectedrecipe' con el índice de la receta seleccionada
+              
+            //this.$test.emit('foo',"works!");
+        },
+     },
+
+
     template:
     /*html*/ 
     `
@@ -44,10 +63,22 @@ app.component('new-recipe-slider',{
     </div>
     <div class="carousel-inner">
     <div class="carousel-item active ">
-    <recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes=2></recipe-card>
+    <div v-bind:src="item.id" v-for="(item, [[1]]) in recipes" class="col-sm-3 pt-1">
+    <recipe-card :image="item.image" :category="item.category" :name="item.name" :description="item.description" :time="item.time" :level="item.level" :likes="item.likes" :index="item.id" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"
+    v-on:recipedetails="onClickRecipeDetails"></recipe-card>
+    </div>
     </div>
     <div class="carousel-item">
-        <recipe-card image="./images/blog-1.jpeg" category="Lunch" name="Sushi" description="300ml Sushi Rice, 100ml Rice wine, 2 tbs Caster Sugar, 3 tbs Mayonnaise, 1 tbs Rice wine, 1 tbs Soy Sauce1 Cucumber" time="30 mins" level="Easy" likes=2></recipe-card>
+    <div v-bind:src="item.id" v-for="(item, [[2]]) in recipes" class="col-sm-3 pt-1">
+    <recipe-card :image="item.image" :category="item.category" :name="item.name" :description="item.description" :time="item.time" :level="item.level" :likes="item.likes" :index="item.id" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"
+    v-on:recipedetails="onClickRecipeDetails"></recipe-card>
+    </div>
+    </div>
+    <div class="carousel-item">
+    <div v-bind:src="item.id" v-for="(item, [[3]]) in recipes" class="col-sm-3 pt-1">
+    <recipe-card :image="item.image" :category="item.category" :name="item.name" :description="item.description" :time="item.time" :level="item.level" :likes="item.likes" :index="item.id" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"
+    v-on:recipedetails="onClickRecipeDetails"></recipe-card>
+    </div>
     </div>
 
     </div>

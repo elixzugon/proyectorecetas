@@ -1,5 +1,4 @@
 
-
 const app = Vue.createApp({
     data() {
         return {
@@ -15,6 +14,12 @@ const app = Vue.createApp({
                 { id: 8, image: "./images/recipes/strawberry-lemonade.jpg", name: "Strawberry Lemonade", category: "Drinks", time: "20 mins", level: "Easy", likes: 18, ingredients: "Juice of 1 Lemon, 1 tblsp Sugar, 8-10 ripe Strawberries, 1 cup Water", instructions: "Throw everything into a blender and mix until fairly smooth. Serve over ice. Glass Serve: Collins Glass" }
 
             ],
+            topten:[
+
+            ],
+            savedrecipes:[
+
+            ],
             categories: [
 
                 { name: 'Desserts', id:1 },
@@ -23,6 +28,7 @@ const app = Vue.createApp({
                 { name: 'Breakfast', id:4 },
                 { name: 'Soups', id:5},
                 { name: 'Drinks', id:6},
+                { name: 'ALL', id:7},
             ],
             recipe: {},
             all_recipes: [],
@@ -38,41 +44,74 @@ const app = Vue.createApp({
 
 //Llena el arreglo de recipes
 
-        axios({
-            method: 'get',
-            url: 'http://prueba01.test/api/recipes/all'
-        })
-            .then(
-                (response) => {
+axios({
+    method: 'get',
+    url: 'http://prueba01.test/api/recipes/all'
+})
+    .then(
+        (response) => {
 
-                    let items = response.data;
-                    console.log(items);
+            let items = response.data;
+            console.log(items);
 
-                    this.recipes = [];
-                    items.forEach(element => {
-                        this.recipes.push({
-                            id: element.id,
-                            image: element.image,
-                            name: element.name,
-                            description: element.description,
-                            occasion: element.occasion,
-                            level: element.level,
-                            likes: element.likes,
-                            total_time: element.total_time
-                            
+            this.recipes = [];
+            items.forEach(element => {
+                this.recipes.push({
+                    id: element.id,
+                    image: element.image,
+                    name: element.name,
+                    description: element.description,
+                    occasion: element.occasion,
+                    level: element.level,
+                    likes: element.likes,
+                    total_time: element.total_time
+                    
+                })
+            })
+         //   console.log(this.recipes);
+         //this.fillDataDetails();
+        }
+    )
+    .catch(
+        error => console.log(error)
+    );
+//_____________________________________-Axios para TOP 10-__________________________-
+            axios({
+                method: 'get',
+                url: 'http://prueba01.test/api/recipes/top10'
+            })
+                .then(
+                    (response) => {
+    
+                        let items = response.data;
+                        console.log(items);
+    
+                        this.topten = [];
+                        items.forEach(element => {
+                            this.topten.push({
+                                id: element.id,
+                                image: element.image,
+                                name: element.name,
+                                description: element.description,
+                                occasion: element.occasion,
+                                level: element.level,
+                                likes: element.likes,
+                                total_time: element.total_time
+                                
+                            })
                         })
-                    })
-                 //   console.log(this.recipes);
-                 //this.fillDataDetails();
-                }
-            )
-            .catch(
-                error => console.log(error)
-            );
+                     //   console.log(this.recipes);
+                     //this.fillDataDetails();
+                    }
+                )
+                .catch(
+                    error => console.log(error)
+                );
+                //_____________________________________-Axios para guardados-__________________________-
     },
     methods: {
 
- 
+        
         fillDataDetails(){
             for(let i =0; i < this.recipes.length; i++){
                 axios({
@@ -124,6 +163,11 @@ const app = Vue.createApp({
             if (this.recipes >= this.recipes.length) {
                 this.recipes = 0;
             }
+        },
+        onSaveRecipe() {
+                this.savedrecipes.push({recipe});
+                console.log(this.savedrecipes);
+
         },
         onClickRecipeDetails(index) {
             this.selectedIndex = index;
@@ -189,10 +233,20 @@ const app = Vue.createApp({
         },
         onClickSelectedCategory(categorynum) {
       
-                axios({
-                    method: 'get',
-                    url: 'http://prueba01.test/api/recipes/filterby/category/'+categorynum
-                })
+            let urlstate1 ='http://prueba01.test/api/recipes/all'
+            let urlstate2 ='http://prueba01.test/api/recipes/filterby/category/'+categorynum
+            let url =''
+            if(categorynum === 7){
+                url = urlstate1;
+            }else{
+                url = urlstate2;
+            }
+
+            axios({
+                method: 'get',
+                url: url
+                                    
+            })
                     .then(
                         (response) => {
         

@@ -12,7 +12,7 @@ app.component('footer-p',{
     <div class="pt-4 links">
     <a href="C:\laragon\www\proyectorecetas\dist\index.html">Inicio</a>
     <a href="C:\laragon\www\proyectorecetas\dist\profile.html">Guardados</a>
-    <a href="#mas_votadas">Más votadas</a>
+    <a href="C:laragon\www\proyectorecetas\dist\top10.html">Más votadas</a>
     <a href="C:\laragon\www\proyectorecetas\dist\profile.html">Perfil</a>
     </div>
     </nav>

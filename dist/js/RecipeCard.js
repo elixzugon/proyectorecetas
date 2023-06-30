@@ -51,6 +51,11 @@ app.component('recipe-card',{
               
             //this.$test.emit('foo',"works!");
         },
+        onSaveRecipe(){
+            console.log("Trying Save Recipe");
+            this.$emit('saverecipe', 1); // Emitir evento 'saverecipe', indicacion de guardar              
+            //this.$test.emit('foo',"works!");
+        },
      },
 
     template:
@@ -84,6 +89,10 @@ app.component('recipe-card',{
         <!--<button class="btn btn-success">Unlike</button>-->
             <a href="#" v-on:click="onClickViewRecipe()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <img class="view-recipe-btn" src="./images/ojo-ver-receta.png" alt="view recipe">
+            </a>
+
+            <a href="#" v-on:click="onSaveRecipe()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <img class="view-recipe-btn" src="./images/ojo-ver-receta.png" alt="view recipe">
             </a>
             </div>
         </div>

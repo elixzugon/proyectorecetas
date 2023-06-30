@@ -16,7 +16,7 @@ app.component('header-nav',{
             
                 <a href="C:/laragon/www/proyectorecetas/dist/index.html">inicio</a>
                 <a href="C:/laragon/www/proyectorecetas/dist/profile.html">guardados</a>
-                <a href="#mas_votadas">más votadas</a>
+                <a href="C:/laragon/www/proyectorecetas/dist/top10.html">más votadas</a>
                 <a href="C:/laragon/www/proyectorecetas/dist/profile.html">perfil</a>
             </ul>
         <form class="d-flex" role="search">

@@ -33,61 +33,30 @@
     <section class="custom-container inicio" id="inicio">
     
         <div class="content">
-            <h3 class="principal-title">descubre lo nuevo que hay para cocinar</h3>
-            <p>cientos de recetas creadas por cientos de artistas en el arte culinario.</p>
-            <a class="btn-inicio" href="top10.html">Ver favoritos</a>
+            <h3 class="principal-title">TOP 10 DE NUESTRAS RECETAS, LAS FAVORITAS</h3>
+            <p>Si estás aquí es porque deseas comer algo delicioso, sigue viendo y empieza a prepararlo.</p>
+            <a class="btn-inicio" href="index.html">Ver todas las recetas</a>        
         </div>
     
     </section>
-    
-    <!-- SLIDER  
-    <section class="custom-container mt-3">
-
-        <h1 class="titles pt-2">RECETAS <span>NUEVAS</span> </h1>
-    
-        <new-recipe-slider></new-recipe-slider>
-RECIPE DETAILS - MODAL-->
-
-    <!-- END OF RECIPE CARD 
-
-</section>
--->
-<hr class="mt-7 mb-7">
 
 <section class="custom-container">
 
 <!--<favorite-recipe-card category="Lunch"></favorite-recipe-card>-->
 
-    <!-- RECIPE CARD -->
-    <div class="row">
-    <h1 id="mas_votadas" class="titles">Categorías</h1>
-    </div>
-    
+    <!-- FAVORITE RECIPE CARD -->
+   
         <div class="row">
         <nav class="navbar navbar-expand-lg ">
             <button class=" gap-1 col-6 mx-auto navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="pt-3 collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="container-fluid">
-                    <ul class="navbar-nav me-auto mb-lg-0 text-center">
-                        <div class="container-btn" >
-                            <div class="buttons">
-                              <div class="btn-group">
-                                    <category-button class="pt-2" v-for="(category, index) in categories" :name="category.name" :id="category.id"
-                                        v-on:selectedcategory="onClickSelectedCategory"></category-button>
-                              </div>
-                            </div>
-                          </div>
-                    </ul>
-                </div>
-            </div>
         </nav>
     </div>
 <!--CARDS-->    
     <div class="pt-1 row align-items-start text-center">
-<div v-bind:src="item.id" v-for="(item, index) in recipes" class="col-sm-3 pt-1">
-<recipe-card :image="item.image" :category="item.category" :name="item.name" :description="item.description" :time="item.time" :level="item.level" :likes="item.likes" :index="item.id" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike" v-on:saverecipe="onSaveRecipe"
+<div v-bind:src="item.id" v-for="(item, index) in topten" class="col-sm-3 pt-1">
+<recipe-card :image="item.image" :category="item.category" :name="item.name" :description="item.description" :time="item.time" :level="item.level" :likes="item.likes" :index="item.id" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"
 v-on:recipedetails="onClickRecipeDetails"></recipe-card>
 </div>    
 </div>

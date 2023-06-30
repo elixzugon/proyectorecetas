@@ -85,7 +85,12 @@ background-color: vars.$clr-light-black-2;
 }
 
 .modal-width{
-    max-width: 1900px;    
+    max-width: 1900px !important;
+    padding-left: 10px;
+}
+.modal-dialog{
+    max-width: 1900px !important;
+    padding-left: 10px;    
 }
 
 .modal-img-row{

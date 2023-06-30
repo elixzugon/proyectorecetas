@@ -24,9 +24,9 @@
 <!-- END OF RECIPE CARD -->
 <div class="custom-container">
 <div class="row ">
-    <div v-bind:src="item.id" v-for="(item, index) in recipes" class="col-sm-3 pt-1">
-    <recipe-card :image="item.image" :category="item.category" :name="item.name" :description="item.description" :time="item.time" :level="item.level" :likes="item.likes" :index="item.id" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike"
-    v-on:recipedetails="onClickRecipeDetails"></recipe-card>
+    <div v-bind:src="item.id" v-for="(item, index) in savedrecipes" class="col-sm-3 pt-1">
+        <recipe-card :image="item.image" :category="item.category" :name="item.name" :description="item.description" :time="item.time" :level="item.level" :likes="item.likes" :index="item.id" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike" v-on:saverecipe="onSaveRecipe"
+        v-on:recipedetails="onClickRecipeDetails"></recipe-card>
     </div>    
     </div></div>
     
