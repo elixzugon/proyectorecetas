@@ -346,26 +346,7 @@ axios({
                     .catch(
                         error => console.log(error)
                     );
-            },
-
-            onClickRecipeDetails(index) {
-
-                axios({
-                    method: 'get',
-                    url: 'http://prueba01.test/api/recipes/recipe/'+index
-                })
-                    .then(
-                        (response) => {
-    
-                            //console.log(response.data.meals
-                            
-    
-                        }
-                    )
-                    .catch(
-                        error => console.log(error)
-                    );
-            },
+            }
 
 
 
@@ -383,3 +364,72 @@ const emitter = new mitt();
 
 //global property for custom events
 app.config.globalProperties.$test = emitter;
+
+/*
+
+const app = Vue.createApp({
+
+
+methods: {
+
+//name,user_lastname,username,country,email,password
+
+            onClickRegister(){
+
+                
+                const name = document.getElementById('name').value;
+                const user_lastname = document.getElementById('lastname').value;
+                const country = document.getElementById('country').value;
+                const email = document.getElementById('email').value;
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                const data = {
+                    name: name,
+                    user_lastname: user_lastname,
+                    country: country,
+                    email: email,
+                    username: username,
+                    password: password
+                };
+                //prueba01.test/api/users/register/?name=username2&last_name=user_lastname&country=Costa Rica&email=pablo2@gmail.com&password=contra123
+
+                axios({
+                    method: 'post',
+                    url: 'https://prueba01.test/api/users/register/'+this.register_url
+                })
+                    .then(
+                    )this.username,
+                    .catch(
+                        error => console.log(error)
+                    );
+            
+axios.post('http://localhost/primerprueba/public/api/users/register', data)
+.then(response => {
+    console.log(response.data);
+    // Redirigir a ../../login
+    window.location.href = '../../login.html';
+})
+.catch(error => {
+    // Error en el registro
+    console.error(error);
+});
+}
+
+
+
+}
+})
+
+//USER_REGISTER_METHODS
+
+
+
+
+
+//init custom events for components
+const emitter = new mitt();
+
+//global property for custom events
+app.config.globalProperties.$test = emitter;
+*/ 

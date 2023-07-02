@@ -26,8 +26,8 @@ app.component('send-data-button',{
 
     methods:{
         onClickRegister(){
-            console.log("name"+this.name, "lastname"+this.last_name, "country"+this.country, "email"+this.email, "password"+ this.password,);
-            this.$emit('click', this.name, this.last_name, this.country, this.email, this.password);
+            console.log(this.name, this.last_name, this.username, this.country, this.email,  this.password);
+            this.$emit('click', this.name, this.last_name, this.username, this.country, this.email, this.password);
         }
     },
 
@@ -35,7 +35,7 @@ app.component('send-data-button',{
     /*html*/ 
     `
       <!--<button type="submit" v-on:register="onClickRegister" class="log-reg-button">Registrar</button>-->
-      <a class="log-reg-button" v-on:click="onClickRegister" >Registrar</a>
+      <a class="log-reg-button" v-on:click="ClickRegister" >Registrar</a>
 
     `
 })  
