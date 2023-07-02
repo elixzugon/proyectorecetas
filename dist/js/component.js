@@ -1,6 +1,10 @@
 
 const app = Vue.createApp({
     data() {
+        //_ USER_TEMP_DATA_
+
+        
+
         return {
             mostVoted:[],
             selectedIndex: 0,
@@ -164,9 +168,74 @@ axios({
                 this.recipes = 0;
             }
         },
-        onSaveRecipe() {
-                this.savedrecipes.push({recipe});
-                console.log(this.savedrecipes);
+        onSaveRecipe(index) {
+            this.selectedIndex = index;
+            console.log("RECIPE ID -" + index);
+            
+            axios({
+                method: 'get',
+                url: 'http://prueba01.test/api/recipes/all'
+            })
+                .then(
+                    (response) => {
+            
+
+
+                        axios({
+    method: 'get',
+    url: 'http://prueba01.test/api/recipes/all'
+})
+    .then(
+        (response) => {
+
+            let items = response.data;
+            console.log(items);
+
+            items.forEach(element => {
+                if(this.recipe.id===index){
+                this.savedrecipes.push({
+                    id: element.id,
+                    image: element.image,
+                    name: element.name,
+                    description: element.description,
+                    occasion: element.occasion,
+                    level: element.level,
+                    likes: element.likes,
+                    total_time: element.total_time
+                    
+                })}
+            })
+         //   console.log(this.recipes);
+         //this.fillDataDetails();
+        }
+    )
+    .catch(
+        error => console.log(error)
+    );
+                        let items = response.data;
+                        console.log(items);
+            
+                        this.recipes = [];
+                        items.forEach(element => {
+                            this.recipes.push({
+                                id: element.id,
+                                image: element.image,
+                                name: element.name,
+                                description: element.description,
+                                occasion: element.occasion,
+                                level: element.level,
+                                likes: element.likes,
+                                total_time: element.total_time
+                                
+                            })
+                        })
+                        console.log(this.savedrecipes);
+                     //this.fillDataDetails();
+                    }
+                )
+                .catch(
+                    error => console.log(error)
+                );
 
         },
         onClickRecipeDetails(index) {
@@ -278,8 +347,36 @@ axios({
                         error => console.log(error)
                     );
             },
+
+            onClickRecipeDetails(index) {
+
+                axios({
+                    method: 'get',
+                    url: 'http://prueba01.test/api/recipes/recipe/'+index
+                })
+                    .then(
+                        (response) => {
+    
+                            //console.log(response.data.meals
+                            
+    
+                        }
+                    )
+                    .catch(
+                        error => console.log(error)
+                    );
+            },
+
+
+
     }
 })
+
+//USER_REGISTER_METHODS
+
+
+
+
 
 //init custom events for components
 const emitter = new mitt();

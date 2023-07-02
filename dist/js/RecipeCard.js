@@ -31,6 +31,7 @@ app.component('recipe-card',{
             type: Number
         }
         
+        
     },
     
     methods:{
@@ -53,7 +54,7 @@ app.component('recipe-card',{
         },
         onSaveRecipe(){
             console.log("Trying Save Recipe");
-            this.$emit('saverecipe', 1); // Emitir evento 'saverecipe', indicacion de guardar              
+            this.$emit('saverecipe', this.index); // Emitir evento 'saverecipe', indicacion de guardar              
             //this.$test.emit('foo',"works!");
         },
      },
@@ -90,10 +91,13 @@ app.component('recipe-card',{
             <a href="#" v-on:click="onClickViewRecipe()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <img class="view-recipe-btn" src="./images/ojo-ver-receta.png" alt="view recipe">
             </a>
-
+            </div>
+            <div class="col">
             <a href="#" v-on:click="onSaveRecipe()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            <img class="view-recipe-btn" src="./images/ojo-ver-receta.png" alt="view recipe">
+            <img class="view-recipe-btn" src="./images/guardar-01.png" alt="view recipe">
             </a>
+            </div>
+
             </div>
         </div>
 </div>

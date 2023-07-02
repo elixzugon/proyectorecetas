@@ -17,7 +17,7 @@
 .principal-title {
   font-weight: 700;
   font-size: 4rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   text-align: left;
   line-height: 5rem;
   text-transform: uppercase;
@@ -28,7 +28,7 @@
   .principal-title {
     font-weight: 700;
     font-size: 2.125rem;
-    color: hsl(0deg, 0%, 100%);
+    color: hsl(0, 0%, 100%);
     line-height: 2.5rem;
     width: 100%;
   }
@@ -45,7 +45,7 @@
 .titles span {
   font-weight: 700;
   font-size: 2.125rem;
-  color: hsl(6deg, 45%, 64%);
+  color: hsl(6, 45%, 64%);
 }
 
 .category-title {
@@ -83,7 +83,7 @@ header {
           justify-content: space-between;
   padding: 1.5rem 7%;
   border-bottom: 0.1rem solid;
-  border-color: hsl(6deg, 45%, 64%);
+  border-color: hsl(6, 45%, 64%);
   top: 0;
   left: 0;
   right: 0;
@@ -93,7 +93,7 @@ header nav a {
   text-decoration: underline;
   list-style: none;
   padding: 0.7rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   text-transform: capitalize;
   font-weight: 300;
   font-size: 1.125rem;
@@ -126,10 +126,10 @@ header nav a:hover {
 .inicio p {
   font-weight: 300;
   font-size: 1.5rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   line-height: 1.8;
   padding: 1rem 0;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   text-align: left;
   text-transform: capitalize;
 }
@@ -137,7 +137,7 @@ header nav a:hover {
   .inicio p {
     font-weight: 300;
     font-size: 1.125rem;
-    color: hsl(0deg, 0%, 100%);
+    color: hsl(0, 0%, 100%);
   }
 }
 
@@ -159,7 +159,7 @@ footer nav a {
   text-decoration: underline;
   list-style: none;
   padding: 0.7rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   text-transform: capitalize;
   font-weight: 300;
   font-size: 1.125rem;
@@ -176,7 +176,7 @@ footer nav a:hover {
 .credits {
   font-weight: 300;
   font-size: 1.125rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   padding: 1.5rem;
 }
 
@@ -197,7 +197,7 @@ hr {
 .principal-title {
   font-weight: 700;
   font-size: 4rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   text-align: left;
   line-height: 5rem;
   text-transform: uppercase;
@@ -207,7 +207,7 @@ hr {
   .principal-title {
     font-weight: 700;
     font-size: 2.125rem;
-    color: hsl(0deg, 0%, 100%);
+    color: hsl(0, 0%, 100%);
     line-height: 2.5rem;
     width: 100%;
   }
@@ -224,7 +224,7 @@ hr {
 .titles span {
   font-weight: 700;
   font-size: 2.125rem;
-  color: hsl(6deg, 45%, 64%);
+  color: hsl(6, 45%, 64%);
 }
 
 .category-title {
@@ -271,7 +271,7 @@ hr {
   font-family: "Rubik", sans-serif;
   font-size: 1.25rem;
   border: none;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   color: #d54630;
   display: inline-block;
   padding: 0.9rem 3rem;
@@ -283,7 +283,7 @@ hr {
   font-family: "Rubik", sans-serif;
   font-size: 1.25rem;
   border: none;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   color: #d54630;
   display: inline-block;
   padding: 0.5rem 1.5rem;
@@ -297,7 +297,7 @@ hr {
   font-family: "Rubik", sans-serif;
   font-size: 1.25rem;
   border: none;
-  background-color: hsl(6deg, 45%, 64%);
+  background-color: hsl(6, 45%, 64%);
   color: rgb(37, 37, 37);
 }
 
@@ -377,14 +377,14 @@ hr {
   font-size: 1.125rem;
   border: none;
   background-color: #d54630;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   padding: 5px;
   text-align: center;
   display: inline-block;
   cursor: pointer;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
-  border: 1px solid hsl(6deg, 45%, 64%);
+  border: 1px solid hsl(6, 45%, 64%);
   border-radius: 5px;
   margin: 5px 1px;
 }
@@ -399,7 +399,7 @@ hr {
   font-family: "Rubik", sans-serif;
   font-size: 1.125rem;
   border: none;
-  background-color: hsl(6deg, 45%, 64%);
+  background-color: hsl(6, 45%, 64%);
   color: rgb(37, 37, 37);
 }
 
@@ -409,7 +409,7 @@ hr {
   font-family: "Rubik", sans-serif;
   font-size: 1.125rem;
   border: none;
-  background-color: hsl(6deg, 45%, 64%);
+  background-color: hsl(6, 45%, 64%);
   color: rgb(37, 37, 37);
 }
 
@@ -461,14 +461,14 @@ hr {
 .product-title { /*titulo productos*/
   font-weight: 900;
   font-size: 2.125rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   text-transform: uppercase;
 }
 
 .product-description { /*titulo productos*/
   font-weight: 300;
   font-size: 1.25rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   padding: 0.5rem 0;
 }
 
@@ -476,7 +476,7 @@ hr {
 .product-details div {
   font-weight: 400;
   font-size: 1.5rem;
-  color: hsl(6deg, 45%, 64%);
+  color: hsl(6, 45%, 64%);
   padding: 0.5rem 0;
   -webkit-transition: 1s ease;
   transition: 1s ease;
@@ -582,7 +582,7 @@ hr {
   font-family: "Rubik", sans-serif;
   font-size: 1.25rem;
   border: none;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   color: #d54630;
   display: inline-block;
   padding: 0.9rem 3rem;
@@ -594,7 +594,7 @@ hr {
   font-family: "Rubik", sans-serif;
   font-size: 1.25rem;
   border: none;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   color: #d54630;
   display: inline-block;
   padding: 0.5rem 1.5rem;
@@ -608,7 +608,7 @@ hr {
   font-family: "Rubik", sans-serif;
   font-size: 1.25rem;
   border: none;
-  background-color: hsl(6deg, 45%, 64%);
+  background-color: hsl(6, 45%, 64%);
   color: rgb(37, 37, 37);
 }
 
@@ -691,14 +691,14 @@ hr {
   font-size: 1.125rem;
   border: none;
   background-color: #d54630;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   padding: 5px;
   text-align: center;
   display: inline-block;
   cursor: pointer;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
-  border: 1px solid hsl(6deg, 45%, 64%);
+  border: 1px solid hsl(6, 45%, 64%);
   border-radius: 5px;
   margin: 5px 1px;
 }
@@ -713,7 +713,7 @@ hr {
   font-family: "Rubik", sans-serif;
   font-size: 1.125rem;
   border: none;
-  background-color: hsl(6deg, 45%, 64%);
+  background-color: hsl(6, 45%, 64%);
   color: rgb(37, 37, 37);
 }
 
@@ -723,7 +723,7 @@ hr {
   font-family: "Rubik", sans-serif;
   font-size: 1.125rem;
   border: none;
-  background-color: hsl(6deg, 45%, 64%);
+  background-color: hsl(6, 45%, 64%);
   color: rgb(37, 37, 37);
 }
 
@@ -756,8 +756,8 @@ h1 {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #ffffff;
-  background-color: hsl(0deg, 0%, 100%);
+  color: #000000;
+  background-color: hsl(0, 0%, 100%);
   background-clip: padding-box;
   border: 1px solid #d54630;
   border-radius: 0.375rem;
@@ -788,7 +788,7 @@ h1 {
   font-weight: 400;
   line-height: 1.5;
   color: #ffffff;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   background-clip: padding-box;
   border: 1px solid #d54630;
   border-radius: 0.375rem;
@@ -813,7 +813,7 @@ h1 {
   font-size: 1.25rem;
   border: none;
   background-color: #d54630;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   padding: 0.9rem 3rem;
   min-height: 3.125rem;
   line-height: initial;
@@ -829,7 +829,7 @@ h1 {
   font-family: "Rubik", sans-serif;
   font-size: 1.25rem;
   border: none;
-  background-color: hsl(6deg, 45%, 64%);
+  background-color: hsl(6, 45%, 64%);
   color: rgb(37, 37, 37);
 }
 
@@ -844,7 +844,7 @@ h1 {
 .create-account:hover {
   font-weight: 600;
   font-size: 1.5rem;
-  color: hsl(6deg, 45%, 64%);
+  color: hsl(6, 45%, 64%);
 }
 
 /* VARIABLES*/
@@ -858,7 +858,7 @@ h1 {
 .principal-title {
   font-weight: 700;
   font-size: 4rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   text-align: left;
   line-height: 5rem;
   text-transform: uppercase;
@@ -869,7 +869,7 @@ h1 {
   .principal-title {
     font-weight: 700;
     font-size: 2.125rem;
-    color: hsl(0deg, 0%, 100%);
+    color: hsl(0, 0%, 100%);
     line-height: 2.5rem;
     width: 100%;
   }
@@ -886,7 +886,7 @@ h1 {
 .titles span {
   font-weight: 700;
   font-size: 2.125rem;
-  color: hsl(6deg, 45%, 64%);
+  color: hsl(6, 45%, 64%);
 }
 
 .category-title {
@@ -970,7 +970,7 @@ ol li {
   font-size: 1.25rem;
   border: none;
   background-color: #d54630;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   display: inline-block;
   padding: 0.5rem 0.8rem;
   border-radius: 4px;
@@ -984,7 +984,7 @@ ol li {
   font-family: "Rubik", sans-serif;
   font-size: 1.25rem;
   border: none;
-  background-color: hsl(6deg, 45%, 64%);
+  background-color: hsl(6, 45%, 64%);
   color: rgb(37, 37, 37);
   padding: 0.7rem 1rem;
 }
@@ -996,7 +996,7 @@ ol li {
   font-size: 1.25rem;
   border: none;
   background-color: #d54630;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   display: inline-block;
   padding: 0.5rem 0.8rem;
   border-radius: 4px;
@@ -1022,7 +1022,7 @@ ol li {
   font-size: 1.25rem;
   border: none;
   background-color: rgb(0, 143, 12);
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   display: inline-block;
   padding: 0.5rem 0.8rem;
   border-radius: 4px;
@@ -1083,7 +1083,7 @@ ol li {
 .modal-recipe-summary {
   font-weight: 400;
   font-size: 1.25rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
 
 .darken-modal {
@@ -1125,12 +1125,12 @@ ol li {
 .modal-details-row div p {
   font-weight: 300;
   font-size: 1.125rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
 @media only screen and (max-width: 480px) {
   .modal-details-row div p {
     font-weight: 300;
     font-size: 1rem;
-    color: hsl(0deg, 0%, 100%);
+    color: hsl(0, 0%, 100%);
   }
 }
