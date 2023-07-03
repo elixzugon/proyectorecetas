@@ -10,7 +10,7 @@ app.component('login-form', {
             password: password
         };
 
-        axios.post('https://localhost/prueba01.test/api/users/login', data)
+        axios.post('http://localhost/prueba01.test/api/users/login', data)
         .then(response => {
           window.location.href = 'https://localhost/proyectorecetas/dist/index.html';
         })

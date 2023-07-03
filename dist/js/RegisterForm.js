@@ -9,7 +9,7 @@ app.component('register-form',{
                         
                         const name = document.getElementById('name').value;
                         const last_name = document.getElementById('last_name').value;
-                        const country = document.getElementById('country').vsalue;
+                        const country = document.getElementById('country').value;
                         const email = document.getElementById('email').value;
                         const username = document.getElementById('username').value;
                         const password = document.getElementById('password').value;
@@ -26,7 +26,7 @@ app.component('register-form',{
                     axios.post('http:/prueba01.test/api/users/register', data)
                     .then(response => {
                         console.log(response.data);
-                        window.location.href = './login.html';
+                       // window.location.href = './login.html';
                     })
                     .catch(error => {
                         console.error(error);
