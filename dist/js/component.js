@@ -57,12 +57,12 @@ axios({
 
             let items = response.data;
             console.log(items);
-
+            const route = 'C:/laragon/www/prueba01/storage/app/public/imgs/';
             this.recipes = [];
             items.forEach(element => {
                 this.recipes.push({
                     id: element.id,
-                    image: element.image,
+                    image: route+element.image,
                     name: element.name,
                     description: element.description,
                     occasion: element.occasion,
@@ -72,8 +72,6 @@ axios({
                     
                 })
             })
-         //   console.log(this.recipes);
-         //this.fillDataDetails();
         }
     )
     .catch(
@@ -94,7 +92,7 @@ axios({
                         items.forEach(element => {
                             this.topten.push({
                                 id: element.id,
-                                image: element.image,
+                                image: 'http://localhost/prueba01.public/storage/app/public/imgs/'+element.image,
                                 name: element.name,
                                 description: element.description,
                                 occasion: element.occasion,
@@ -132,6 +130,7 @@ axios({
                           
                             this.recipes[i].level= items.level,
                             this.recipes[i].likes= items.likes,
+                            this.recipes[i].image= 'http://localhost/prueba01.public/storage/app/public/imgs/'+element.image,
                             this.recipes[i].preparation_time= items.preparation_time,
                             this.recipes[i].description= items.description,
                             this.recipes[i].cooking_time= items.cooking_time,
@@ -171,72 +170,21 @@ axios({
         onSaveRecipe(index) {
             this.selectedIndex = index;
             console.log("RECIPE ID -" + index);
-            
+
+            //get recipe details
             axios({
                 method: 'get',
-                url: 'http://prueba01.test/api/recipes/all'
+                url: 'http://prueba01.test/api/users/saverecipe/1/'+index
             })
                 .then(
                     (response) => {
-            
 
 
-                        axios({
-    method: 'get',
-    url: 'http://prueba01.test/api/recipes/all'
-})
-    .then(
-        (response) => {
-
-            let items = response.data;
-            console.log(items);
-
-            items.forEach(element => {
-                if(this.recipe.id===index){
-                this.savedrecipes.push({
-                    id: element.id,
-                    image: element.image,
-                    name: element.name,
-                    description: element.description,
-                    occasion: element.occasion,
-                    level: element.level,
-                    likes: element.likes,
-                    total_time: element.total_time
-                    
-                })}
-            })
-         //   console.log(this.recipes);
-         //this.fillDataDetails();
-        }
-    )
-    .catch(
-        error => console.log(error)
-    );
-                        let items = response.data;
-                        console.log(items);
-            
-                        this.recipes = [];
-                        items.forEach(element => {
-                            this.recipes.push({
-                                id: element.id,
-                                image: element.image,
-                                name: element.name,
-                                description: element.description,
-                                occasion: element.occasion,
-                                level: element.level,
-                                likes: element.likes,
-                                total_time: element.total_time
-                                
-                            })
-                        })
-                        console.log(this.savedrecipes);
-                     //this.fillDataDetails();
                     }
                 )
                 .catch(
                     error => console.log(error)
                 );
-
         },
         onClickRecipeDetails(index) {
             this.selectedIndex = index;
@@ -250,14 +198,13 @@ axios({
                 .then(
                     (response) => {
 
-                        //console.log(response.data.meals);
-
                         let item = response.data[0][0];
                         console.log(item);
-                        
+
+
                                                
                         this.recipe.id = index;
-                        this.recipe.image = item.image;
+                        this.recipe.image= 'http://localhost/prueba01.public/storage/app/public/imgs/'+item.image;
                         this.recipe.name = item.name;
                         this.recipe.category = item.category;
                         this.recipe.description = item.description;
@@ -269,31 +216,24 @@ axios({
                         this.recipe.preparation_instructions = item.preparation_instructions;
                         this.recipe.occasion = item.occasion;
                         this.recipe.portions = item.portions;
-                        item.total_time;
+                        this.recipe.total_time = item.total_time;
 
-                        console.log(item.total_time);
-
-
-                        let tiempo_total = 0
-                        tiempo_total = item.preparation_time + item.cooking_time;
-                        this.recipe.total_time = tiempo_total;
+                        IngredientsList = [];
+                        let data = [];
                         
-
-                        //get ingredients array
-                        /*
-                        let ingredientsList = "";
-                        for(let i = 0; i < item.extendedIngredients.length; i++){
-                            ingredientsList += item.extendedIngredients[i].original + "\n";
+                        console.log(response.data[1]);
+                        for (let i = 0; i < response.data[1].length; i++) {
+                          console.log(response.data[1][i].description);
+                          const ingredient =
+                            response.data[1][i].amount +
+                            " " +
+                            response.data[1][i].measurement_unit +
+                            " " +
+                            response.data[1][i].description;
+                          data.push(ingredient);
                         }
-                        this.recipe.ingredients = ingredientsList;
-
-                        let occasionsList = "";
-                        for(let i = 0; i < item.occasions.length; i++){
-                            occasion += item.occasions + "\n";
-                        }
-                        this.recipe.occasion = occasionsList;
-*/
-                        //this.fillDataDetails();
+                        this.recipe.ingredients = data;
+                      
                     }
                 )
                 .catch(
@@ -329,7 +269,7 @@ axios({
                             items.forEach(element => {
                                 this.recipes.push({
                                     id: element.id,
-                                    image: element.image,
+                                    image:'http://localhost/prueba01.public/storage/app/public/imgs/'+element.image,
                                     name: element.name,
                                     description: element.description,
                                     occasion: element.occasion,

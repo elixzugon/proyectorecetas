@@ -5,7 +5,6 @@ app.component('register-form',{
         //name,user_lastname,username,country,email,password
         
                     onClickRegister(){
-        
                         
                         const name = document.getElementById('name').value;
                         const last_name = document.getElementById('last_name').value;
@@ -23,10 +22,10 @@ app.component('register-form',{
                             password: password
                         };
                     
-                    axios.post('http:/prueba01.test/api/users/register', data)
+                    axios.post('http://prueba01.test/api/users/register', data)
                     .then(response => {
                         console.log(response.data);
-                       // window.location.href = './login.html';
+                        //window.location.href = './login.html';
                     })
                     .catch(error => {
                         console.error(error);

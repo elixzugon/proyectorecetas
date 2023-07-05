@@ -97,7 +97,9 @@ methods:{
         <div class="col">
         <h1 class="modal-titles">INGREDIENTES</h1>      
         <div class="mb-3 mt-3 ingredients">
-        <p> {{ ingredients }}</p>
+        <ul>
+        <li v-for="ingredient in ingredients" :key="ingredient">{{ ingredient }}</li>
+      </ul>
         </div>
         </div>
         

@@ -1,33 +1,43 @@
 app.component('profile',{
-    props:{
-        nombre:{
-            type: String
-        },
-        usuario:{
-            type: String,
-            default: "default category"
-        },
-        posts:{
-            type: String,
-            default: "default name"
-        },
-        biografia:{
-            type: String,
-            default: "default level"
-        },
-        likes:{
-            type: Number,
-            default: 1
-        },
-        imagen:{
-            type: String,
-            default: ""
-        },
-    },
+
     data(){
         return{
-            counter: 0
+            counter: 0,
+            name:'',
+            lastname:'',
+            country:'',
+            email:'',
         }
+    },
+    userData(){
+      this.name=localStorage.getItem('name');
+      this.lastname=localStorage.getItem('lastname');
+      this.country=localStorage.getItem('country');
+      this.email=localStorage.getItem('email');
+    },
+    methods:{
+      onClickLogout(){
+        token = localStorage.getItem('token');
+        console.log(localStorage.getItem('token'));
+        console.log(token);
+
+
+        axios({
+          method: 'get',
+          url: 'http://localhost/prueba01/api/users/logout/',
+          headers: {
+            Authorization: 'Bearer ${token}'
+          }
+        })
+        .then(
+          (response) => {
+            window.location.href = 'http://localhost/proyectorecetas/dist/login.html'
+          }
+        )
+        .catch (
+          error => console.log(error)
+        );
+      }
     },
     template:
     /*html*/ 
@@ -48,29 +58,29 @@ app.component('profile',{
           </button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="C:/laragon/www/proyectorecetas/dist/passwordrecovery.html">Cambio de contraseña</a></li>
-            <li><a class="dropdown-item" href="C:/laragon/www/proyectorecetas/dist/login.html">Cerrar sesión</a></li>
+            <li><a @click="onClickLogout" class="dropdown-item" >Cerrar sesión</a></li>
           </ul>
         </div>
           
             <img alt="Imagen" class="img-fluid img-thumbnail mt-4 mb-2"
-            style="width: 150px; z-index: 1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" v-bind:src="imagen">
+            style="width: 150px; z-index: 1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
               
 
           </div>
           <div class="ms-3" style="margin-top: 130px;">
-            <h5>{{nombre}}</h5>
-            <p>{{usuario}}</p>
+            <h5>{{name}}</h5>
+            <p>{{lastname}}</p>
           </div>
           
         </div>
         <div class="p-4 " style="background-color: #f8f9fa;">
           <div class="d-flex justify-content-end text-center py-1">
             <div>
-              <p class="mb-1  profile-data">{{posts}}</p>
+              <p class="mb-1  profile-data">{{country}}</p>
               <p class="mb-0 profile-data-title">Publicaciones</p>
             </div>
             <div class="px-3">
-              <p class="mb-1  profile-data">{{likes}}</p>
+              <p class="mb-1  profile-data">{{email}}</p>
               <p class="mb-0 profile-data-title">Likes</p>
             </div>
             
@@ -81,7 +91,7 @@ app.component('profile',{
           <div class="mb-5">
             <p class="profile-data-title mb-1">Biografia</p>
             <div class="p-4" style="background-color: #f8f9fa;">
-              <p class="font-italic mb-1">{{biografia}}</p>
+              <p class="font-italic mb-1">{{}}</p>
             </div>
           </div>
           <div class="justify-content-between align-items-center mb-4">

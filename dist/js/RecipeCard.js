@@ -1,7 +1,8 @@
 app.component('recipe-card',{
     props:{
         image:{
-            type: String
+            type: String,
+            default: "default image"
         },
         category:{
             type: String,
@@ -17,7 +18,7 @@ app.component('recipe-card',{
         },
         total_time:{
             type: Number,
-            default: "default time"
+            default: 1
         },
         level:{
             type: String,
@@ -82,7 +83,7 @@ app.component('recipe-card',{
 
         <div class="row">
             <div class="col">
-            <a href="#" v-on:click="onClickLike()">
+            <a v-on:click="onClickLike()">
                 <img  class="like-btn" src="./svg/star-solid.svg" alt="like">
             </a>
             </div>
@@ -100,7 +101,6 @@ app.component('recipe-card',{
 
             </div>
         </div>
-</div>
 
      `
 })

@@ -14,10 +14,10 @@ app.component('header-nav',{
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
             
-                <a href="C:/laragon/www/proyectorecetas/dist/index.html">inicio</a>
-                <a href="C:/laragon/www/proyectorecetas/dist/profile.html">guardados</a>
-                <a href="C:/laragon/www/proyectorecetas/dist/top10.html">más votadas</a>
-                <a href="C:/laragon/www/proyectorecetas/dist/profile.html">perfil</a>
+                <a href="http://localhost/proyectorecetas/dist/index.html">inicio</a>
+                <a href="http://localhost/proyectorecetas/dist/profile.html">guardados</a>
+                <a href="http://localhost/proyectorecetas/dist/top10.html">más votadas</a>
+                <a href="http://localhost/proyectorecetas/dist/profile.html">perfil</a>
             </ul>
         <form class="d-flex" role="search">
         <input class="form-control me-2" v-model="searchQuery" type="search" placeholder="Search" aria-label="Search">

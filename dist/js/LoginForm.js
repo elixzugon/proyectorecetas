@@ -1,18 +1,33 @@
 app.component('login-form', {
     methods: {
       onClickLogin() {
-        const email = document.getElementById('email').value;
+        const user = document.getElementById('email').value;
         const password = document.getElementById('password').value;
-  
+
 
         const data = {
-            email: email,
+            email: user,
             password: password
         };
 
-        axios.post('http://localhost/prueba01.test/api/users/login', data)
+        let config = {
+            headers: {
+                'Content-Type': 'application/json',
+                "Access-Control-Allow-Origin": "*"
+            }
+        }
+
+        axios.post('http://prueba01.test/api/users/login', data, config)
+
         .then(response => {
-          window.location.href = 'https://localhost/proyectorecetas/dist/index.html';
+                localStorage.setItem('token', response.data.accessToken);
+                localStorage.setItem('id', response.data.id);
+                localStorage.setItem('name', response.data.name);
+                localStorage.setItem('lastname', response.data.accessToken);
+                localStorage.setItem('email', response.data.email);
+                localStorage.setItem('country', response.data.country);
+              window.location.href = 'http://localhost/proyectorecetas/dist/index.html';
+
         })
         .catch(error => {
           console.log(error);
