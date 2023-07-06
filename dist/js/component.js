@@ -126,64 +126,11 @@ axios({
     },
     methods: {
 
-       /* NON USED 
-        fillDataDetails(){
-            for(let i =0; i < this.recipes.length; i++){
-                axios({
-                    method: 'get',
-                    url: 'http://prueba01.test/api/recipes/recipe/'+this.recipe[i].id
-                })
-                    .then(
-                        (response) => {
-        
-                            let items = response.data;
-                            console.log(items);
-
-                          //  this.recipes[i].category= items.category,
-                          
-                            this.recipes[i].level= items.level,
-                            this.recipes[i].likes= items.likes,
-                            this.recipes[i].image= 'http://localhost/prueba01.public/storage/app/public/imgs/'+element.image,
-                            this.recipes[i].preparation_time= items.preparation_time,
-                            this.recipes[i].description= items.description,
-                            this.recipes[i].cooking_time= items.cooking_time,
-                            this.recipes[i].cooking_time= items.cooking_time,
-                            this.recipes[i].total_time= items.total_time,
-                            this.recipes[i].preparation_instructions= items.preparation_instructions,
-                            this.recipes[i].portions= items.portions,
-                            this.recipes[i].category= items.category,
-                            this.recipes[i].occasion= items.occasion,
-                            this.recipes[i].ingredients= "NA"
-                        }
-                    )
-                    .catch(
-                        error => console.log(error)
-                    );
-            }
-        },
-    */
-
-        updateUserID(id) {
-            this.actualUserID = id;
-          },
-
         onClickRecipeLike(index) {
-            this.recipes[index].likes += 1;
+            this.recipes[index-1].likes += 1;
         },
         onClickRecipeUnlike(index) {
             if (this.recipes[index].likes > 0) this.recipes[index].likes -= 1;
-        },
-        onClickPrev() {
-            if (this.currentRecipeIndex > 0) {
-                this.currentRecipeIndex--; 
-                this.currentRecipe = this.recipes[this.currentRecipeIndex]; 
-            }
-        },
-        onClickNext() {
-            this.recipes++;
-            if (this.recipes >= this.recipes.length) {
-                this.recipes = 0;
-            }
         },
         onSaveRecipe(index) {
             this.selectedIndex = index;
@@ -308,35 +255,36 @@ axios({
                     );
             },
         
-            onSearchRecipe(name){
-                axios({
-                    method: 'get',
-                    url: 'http://prueba01.test/api/recipes/searchbyname/'+name,
-                })
-                .then(
-                    (response) => {
-                        let items = response.data;
-                        this.recipes =[];
+        onSearchRecipe(name){
+            axios({
+                method: 'get',
+                url: 'http://prueba01.test/api/recipes/searchbyname/'+name,
+            })
+            .then(
+                (response) => {
+                    let items = response.data;
+                    const route = 'c:/laragon/www/prueba01/storage/app/public/imgs/';
+                    this.recipes =[];
                     
-                        items.forEach( element => {
-                            this.recipes.push({
-                                id: element.id,
-                                name: element.name,
-                                category: element.category,
-                                image: element.image,
-                                occasion: element.occasion,
-                                portions: element.portions,
-                                total_time: element.total_time,
-                                level: element.level,
-                                likes: element.likes,
-                            });
-                        })
-                    }
-                )
-                .catch(
-                    error => console.log(error)
-                );
-            },
+                    items.forEach( element => {
+                        this.recipes.push({
+                            id: element.id,
+                            name: element.name,
+                            category: element.category,
+                            image: route+element.image,
+                            occasion: element.occasion,
+                            portions: element.portions,
+                            total_time: element.total_time,
+                            level: element.level,
+                            likes: element.likes,
+                        });
+                    })
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+        },
     
             onFavoriteRecipe(){
                 

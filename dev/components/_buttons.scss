@@ -20,17 +20,20 @@ padding: 0.9rem 3rem;
 }
 
 .like-btn{
-    padding: .5rem;
+        padding: .5rem;
         height:50px;
         width:55px;
         transition: 1s ease;
+        cursor: pointer;
+
 }
 
 .view-recipe-btn{
-    padding: .5rem;
+        padding: .5rem;
         height:50px;
         width:55px;
         transition: .5s ease;
+        cursor: pointer;
 }
 
 .like-btn:hover{

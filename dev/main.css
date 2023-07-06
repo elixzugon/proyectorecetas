@@ -307,6 +307,7 @@ hr {
   width: 55px;
   -webkit-transition: 1s ease;
   transition: 1s ease;
+  cursor: pointer;
 }
 
 .view-recipe-btn {
@@ -315,6 +316,7 @@ hr {
   width: 55px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .like-btn:hover {
@@ -618,6 +620,7 @@ hr {
   width: 55px;
   -webkit-transition: 1s ease;
   transition: 1s ease;
+  cursor: pointer;
 }
 
 .view-recipe-btn {
@@ -626,6 +629,7 @@ hr {
   width: 55px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .like-btn:hover {

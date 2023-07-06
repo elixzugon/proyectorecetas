@@ -7,7 +7,59 @@ app.component('profile',{
             lastname:'',
             country:'',
             email:'',
+            actualUserID:'',
+            savedRecipes:[]
         }
+    },
+
+    mounted(){
+
+        axios({
+            method: 'get',
+            url: 'http://prueba01.test/api/users/getuserid'
+        })
+            .then(
+                (response) => {
+                    this.actualUserID = response.data.uid;
+                    console.log(response);
+
+                }
+            )
+            .catch(
+                error => console.log(error)
+            );
+
+//__________________________________________________________________________
+
+      axios({
+        method: 'get',
+        url: 'prueba01.test/api/users/savedrecipes/'+actualUserID
+    })
+        .then(
+            (response) => {
+
+                let items = response.data;
+                console.log(items);
+                const route = 'c:/laragon/www/prueba01/storage/app/public/imgs/';
+                this.topten = [];
+                items.forEach(element => {
+                    this.topten.push({
+                        id: element.id,
+                        image: route+element.image,
+                        name: element.name,
+                        description: element.description,
+                        occasion: element.occasion,
+                        level: element.level,
+                        likes: element.likes,
+                        total_time: element.total_time
+                        
+                    })
+                })
+            }
+        )
+        .catch(
+            error => console.log(error)
+        );
     },
 
     userData(){
@@ -19,9 +71,11 @@ app.component('profile',{
     methods:{
       onClickLogout(){
         token = localStorage.getItem('token');
+        //métodos para pruebas porque el login no funciona bien, dice que loguea pero realmente no loguea
         console.log(this.name);
         console.log(localStorage.getItem('token'));
         console.log(token);
+        //-------------------------------------------------
 
         let config = {
           headers: {
@@ -32,7 +86,7 @@ app.component('profile',{
 
         axios({
           method: 'get',
-          url: '/api/users/logout',headers: { Authorization: 'Bearer ${token}'},config
+          url: 'http://prueba01.test/api/users/logout',headers: { Authorization: 'Bearer ${token}'},config
         })
         .then(
           (response) => {
@@ -43,7 +97,8 @@ app.component('profile',{
         .catch (
           error => console.log(error)
         );
-      }
+      },
+  
     },
     template:
     /*html*/ 

@@ -1,5 +1,9 @@
 app.component('login-form', {
     methods: {
+        //Este método se quedó aqui porque estaba probando que el login no funciona a pesar de que me tira mensaje
+        //de que si logró hacer el login entonces hice la comprobación con este método pero no sirve,
+        //logré enviar el id al component.js (componente padre) pero necesita estar logueado algun usuario
+        //para poder cargar las recetas guardadas y para poder guardarlas.
         onGetUserID() {
             axios({
                 method: 'get',
@@ -21,11 +25,12 @@ app.component('login-form', {
         const user = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-
+/*
         const data = {
             email: user,
             password: password
         };
+*/
 
         let config = {
             headers: {
@@ -33,22 +38,27 @@ app.component('login-form', {
                 "Access-Control-Allow-Origin": "*"
             }
         }
-
-        axios.post('http://prueba01.test/api/users/login', data, config)
+        //console.log(data);
+        axios.post('http://prueba01.test/api/users/login',{
+        email: user,
+        password: password},config
+        )
 
         .then(response => {
+            //console.log(data);
+
                 localStorage.setItem('userId', response.data.user.id);
                 localStorage.setItem('token', response.data.user.accessToken);
                 localStorage.setItem('id', response.data.user.id);
                 localStorage.setItem('name', response.data.user.name);
-                localStorage.setItem('lastname', response.data.user.accessToken);
+                localStorage.setItem('lastname', response.data.user.lastname);
                 localStorage.setItem('email', response.data.user.email);
                 localStorage.setItem('country', response.data.user.country);
                 this.onGetUserID();
                 console.log(response.data.user.id);
                 console.log(response.data);
 
-                window.location.href = 'file:///C:/laragon/www/proyectorecetas/dist/index.html';
+                //window.location.href = 'file:///C:/laragon/www/proyectorecetas/dist/index.html';
 
         })
         .catch(error => {
