@@ -9,6 +9,7 @@ app.component('profile',{
             email:'',
         }
     },
+
     userData(){
       this.name=localStorage.getItem('name');
       this.lastname=localStorage.getItem('lastname');
@@ -18,20 +19,25 @@ app.component('profile',{
     methods:{
       onClickLogout(){
         token = localStorage.getItem('token');
+        console.log(this.name);
         console.log(localStorage.getItem('token'));
         console.log(token);
 
+        let config = {
+          headers: {
+              'Content-Type': 'application/json',
+              "Access-Control-Allow-Origin": "*"
+          }
+      }
 
         axios({
           method: 'get',
-          url: 'http://localhost/prueba01/api/users/logout/',
-          headers: {
-            Authorization: 'Bearer ${token}'
-          }
+          url: '/api/users/logout',headers: { Authorization: 'Bearer ${token}'},config
         })
         .then(
           (response) => {
-            window.location.href = 'http://localhost/proyectorecetas/dist/login.html'
+            
+            //window.location.href = 'http://localhost/proyectorecetas/dist/login.html'
           }
         )
         .catch (

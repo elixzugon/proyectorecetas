@@ -94,7 +94,7 @@ app.component('recipe-card',{
             </a>
             </div>
             <div class="col">
-            <a href="#" v-on:click="onSaveRecipe()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <a  v-on:click="onSaveRecipe()">
             <img class="view-recipe-btn" src="./images/guardar-01.png" alt="view recipe">
             </a>
             </div>

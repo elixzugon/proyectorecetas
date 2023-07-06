@@ -27,7 +27,7 @@
 <section id="app">
 
     <!-- HEADER - NAV -->
-    <header-nav></header-nav>
+    <header-nav  v-on:searchrecipe="onSearchRecipe"></header-nav>
     <!-- HEADER - NAV -->
 
     <section class="custom-container inicio" id="inicio">
@@ -88,7 +88,7 @@ RECIPE DETAILS - MODAL-->
     <div class="pt-1 row align-items-start text-center">
 <div v-bind:src="item.id" v-for="(item, index) in recipes" class="col-sm-3 pt-1">
 <recipe-card :image="item.image" :category="item.category" :name="item.name" :description="item.description" :total_time="item.total_time" :level="item.level" :likes="item.likes" :index="item.id" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike" v-on:saverecipe="onSaveRecipe"
-v-on:recipedetails="onClickRecipeDetails"></recipe-card>
+v-on:recipedetails="onClickRecipeDetails" v-on:user-id-updated="onSaveRecipe"></recipe-card>
 </div>    
 </div>
 

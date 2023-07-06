@@ -1,5 +1,22 @@
 app.component('login-form', {
     methods: {
+        onGetUserID() {
+            axios({
+                method: 'get',
+                url: 'http://prueba01.test/api/users/getuserid'
+            })
+                .then(
+                    (response) => {
+                        this.actualUserID = response.data.uid;
+                        console.log(response);
+
+
+                    }
+                )
+                .catch(
+                    error => console.log(error)
+                );
+        },
       onClickLogin() {
         const user = document.getElementById('email').value;
         const password = document.getElementById('password').value;
@@ -20,13 +37,18 @@ app.component('login-form', {
         axios.post('http://prueba01.test/api/users/login', data, config)
 
         .then(response => {
-                localStorage.setItem('token', response.data.accessToken);
-                localStorage.setItem('id', response.data.id);
-                localStorage.setItem('name', response.data.name);
-                localStorage.setItem('lastname', response.data.accessToken);
-                localStorage.setItem('email', response.data.email);
-                localStorage.setItem('country', response.data.country);
-              window.location.href = 'http://localhost/proyectorecetas/dist/index.html';
+                localStorage.setItem('userId', response.data.user.id);
+                localStorage.setItem('token', response.data.user.accessToken);
+                localStorage.setItem('id', response.data.user.id);
+                localStorage.setItem('name', response.data.user.name);
+                localStorage.setItem('lastname', response.data.user.accessToken);
+                localStorage.setItem('email', response.data.user.email);
+                localStorage.setItem('country', response.data.user.country);
+                this.onGetUserID();
+                console.log(response.data.user.id);
+                console.log(response.data);
+
+                window.location.href = 'file:///C:/laragon/www/proyectorecetas/dist/index.html';
 
         })
         .catch(error => {
@@ -93,17 +115,10 @@ app.component('login-form', {
 
                   <a @click="onClickLogin" type="submit" class="log-reg-button">Iniciar sesión</a>
               </form>
-<!--
-              <p class=" text-center text-muted fw-bold">O inicia sesión con:</p>
 
-              <div class="d-flex justify-content-around">
-                  <button type="submit" class="btn btn-outline-light flex-grow-1 mr -2"><i class="fa-brands fa-google lead mr-2 me-2"></i>Google</button>
-                  <button type="submit" class="btn btn-outline-light flex-grow-1 ml-2"><i class="fa-brands fa-facebook-f lead mr-2 me-2"></i>Facebook</button>
-              </div>
-          -->
           </div>
           <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 w-100 mt-auto">
-              <p class=" d-inline-block mb-0">¿Todavía no tienes una cuenta?</p> <br> <a class="text-decoration-none create-account" href="#"> Crea una ahora</a>
+              <p class=" d-inline-block mb-0">¿Todavía no tienes una cuenta?</p> <br> <a class="text-decoration-none create-account" href="file:///C:/laragon/www/proyectorecetas/dist/register.html"> Crea una ahora</a>
           </div>
       </div>
 

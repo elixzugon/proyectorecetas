@@ -2,7 +2,6 @@ app.component('register-form',{
 
     methods: {
 
-        //name,user_lastname,username,country,email,password
         
                     onClickRegister(){
                         
@@ -25,7 +24,7 @@ app.component('register-form',{
                     axios.post('http://prueba01.test/api/users/register', data)
                     .then(response => {
                         console.log(response.data);
-                        //window.location.href = './login.html';
+                        window.location.href = './login.html';
                     })
                     .catch(error => {
                         console.error(error);
@@ -103,10 +102,7 @@ app.component('register-form',{
                         <label for="exampleInputPassword" >Contraseña</label>
                         <input type="password"  placeholder="Ingresa tu contraseña" id="password">
                     </div>
-                    <!--<div class="mb-4">
-                        <label for="exampleInputPasswordVer1">Verifica tu contraseña</label>
-                        <input type="passwordVer"  placeholder="Re ingresa tu contrasña" id="passwordVer" v-model="passwordVer">
-                    </div><-->
+
                     <div class="mb-4">
                         <label for="exampleInputCountry1">Tu país</label>
                         <input type="country"  placeholder="Re ingresa tu contrasña" id="country">
@@ -114,10 +110,13 @@ app.component('register-form',{
 
             
                    <a  @click="onClickRegister" class="log-reg-button">Registrar</a>
-                   <!--<send-data-button v-bind:name="name" v-bind:last_name="lastname" v-bind:country="country"  v-bind:email="email" v-bind:password="password"  v-on:click="onClickRegister"></send-data-button>-->  
 
                 </form>
+                <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 w-100 mt-auto">
+                <p class=" d-inline-block mb-0">¿Ya tienes una cuenta?</p> <br> <a class="text-decoration-none create-account" href="file:///C:/laragon/www/proyectorecetas/dist/login.html"> Inicia sesión</a>
             </div>
+            </div>
+            
         </div>
 
     </div>
